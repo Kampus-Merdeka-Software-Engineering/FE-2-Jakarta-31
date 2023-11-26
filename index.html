@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/subs-login.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>GlobeGaze</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <div class="header-container-1">
+        <div class="head-1 container">
+          <div class="left">
+            <img src="assets/img/logo/gg.png" alt="" style="width: 6%;" />
+          </div>
+          <div class="right">
+            <button class="subs" id="open-subscribe-form-main"><p>Subscribe</p></button>
+            <button class="login"><i class="fa-solid fa-user-large"><span>Log In</span></i></button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="header-container-2">
+        <div class="head-2 container">
+          <div class="left">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="lifestyle.html">Lifestyle</a></li>
+              <li><a href="techno.html">Technology</a></li>
+            </ul>
+          </div>
+          <div class="center">
+            <h1>GlobeGaze</h1>
+          </div>
+          <div class="right">
+            <ul>
+              <li><a href="sports.html">Sports</a></li>
+              <li><a href="entertain.html">Entertainment</a></li>
+              <li><a href="politics.html">Politics</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div class="mobile-header">
+        <div class="left">
+          <button><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="right">
+          <div class="logo">
+            <h1>GlobeGaze</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="offconvas">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close">&times;</div>
+          <div class="divider"></div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lifestyle.html">Lifestyle</a></li>
+            <li><a href="techno.html">Technology</a></li>
+            <li><a href="sports.html">Sports</a></li>
+            <li><a href="entertain.html">Entertainment</a></li>
+            <li><a href="politics.html">Politics</a></li>
+            <div class="divider"></div>
+            <div class="follow">
+              <button class="subs-mobile" id="open-subscribe-form"><p>Subscribe</p></button>
+              <button class="login-mobile"><i class="fa-solid fa-user-large"><span>Log In</span></i></button>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="subscribe-form">
+      <div class="right">
+        <h2>Subscribe to GlobeGaze Today</h2>
+        <p>Join now to unlock a wealth of knowledge on a journey to enlightenment with GlobeGaze.</p>
+        <div class="form">
+          <div class="input">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="button">
+            <button type="submit">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn">&times;</button>
+    </div>
+
+    <!-- LOGIN/REGISTRASI FORM -->
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+      <i class="close-btn fa-solid fa-xmark"></i>
+        <div class="form-box login">
+        <div class="form-details">
+          <h2>Welcome Back</h2>
+          <p>Please login using your email & password</p>
+        </div>
+        <div class="form-content">
+          <h2>LOG IN</h2>
+          <form action="#" id="login-form" class="log">
+            <div class="input-data">
+              <input type="text" id="email" placeholder="Email">
+            </div>
+              <div class="input-data">
+                <input type="password" name="password" id="password" placeholder="Password">
+              </div>
+              <button type="submit">Log In</button>
+          </form>
+          <div class="bottom-link">
+            Don't have an account?
+            <a href="#" id="regis-link">Sign Up</a>     
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box signup">
+        <div class="form-details">
+          <h2>Create Account</h2>
+          <p>Use your email for registeration</p>
+        </div>
+        <div class="form-content">
+          <h2>SIGN UP</h2>
+          <form action="#" id="regis-form" class="log">
+            <div class="input-data">
+              <input type="text" name="name" id="name" placeholder="Name">
+            </div>
+            <div class="input-data">
+              <input type="text" id="email" placeholder="Email">
+            </div>
+              <div class="input-data">
+                <input type="password" name="password" id="password" placeholder="Password">
+              </div>
+              <button type="submit">Sign Up</button>
+          </form>
+          <div class="bottom-link">
+            Already have an account?
+            <a href="#" id="login-link">Log In</a>     
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <!-- TRENDING NEWS -->
+      <div data-aos="fade-down"  data-aos-duration="750">
+        <div class="container-2">
+         <nav>
+           <div class="trending-1">
+             <div class="trend">
+               <div class="left-1">
+                 <img src="assets/img/trending/1.png" alt="gb 1" />
+                 <a href="trend-1.html"><h3 class="heading-1">NFL 2023 Midseason Report: AFC, NFC Questions and Stats</h3></a>
+                 <p>Nation Reporters</p>
+                 <div class="divider"></div>
+               </div>
+               <div class="left-2">
+                 <img src="assets/img/trending/2.png" alt="gb 2" />
+                 <a href="trend-2.html"><h3 class="heading-2">The Hot New Thing in Social Media Is Here. Again.</h3></a>
+                 <p>Madison Malone K.</p>
+                 <div class="divider"></div>
+               </div>
+             </div>
+           </div>
+         </nav>
+    
+   
+         <main>
+           <div class="trending-2">
+             <div class="trend">
+               <div class="center">
+                 <img class="primary" src="assets/img/trending/3.png" alt="gb 3" />
+                 <a href="trend-3.html"><h3 class="heading-3">FBI director: Antisemitism reaching 'historic level' in US</h3></a>
+                 <h6> FBI Director Christopher Wray said Tuesday that antisemitism is reaching “historic levels” in the United States.</h6>
+                 <div class="wrt">
+                   <img src="assets/img/trending/p-1.png" alt="" />
+                   <p>Hannah Rabinowitz</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </main>
+         
+         <aside>
+           <div class="trending-3">
+             <div class="trend">
+               <div class="right-1">
+                 <img src="assets/img/trending/4.png" alt="gb 4" />
+                 <a href="trend-4.html"><h3 class="heading-4">wave to earth Delivers Heartfelt Night at Sold-Out LA Concert</h3></a>
+                 <p>Erica</p>
+                 <div class="divider"></div>
+               </div>
+               <div class="right-2">
+                 <img src="assets/img/trending/5.png" alt="gb 5" />
+                 <a href="trend-5.html"><h3 class="heading-5">Nam Joo Hyuk Plays a Dark Hero in Disney+ K-Drama "Vigilante"</h3></a>
+                 <p>Lily Alice</p>
+                 <div class="divider"></div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </aside>
+     </div>
+   </div>
+
+    <!-- RECENT NEWS -->
+    <div class="recentNews">
+        <p class="head">Recent News</p>
+        <div class="divider"></div>
+      <div data-aos="fade-right">
+        <div class="cards">
+          <div class="card card1">
+              <div class="picture">
+                  <img src="assets/img/recent/1.png" alt="">
+              </div>
+              <div class="details">
+                  <h3>Embracing the Mediterranean Lifestyle at Zel Mallorca</h3>
+                  <p>Lifestyle</p>
+              </div>
+          </div>
+          <div class="card card2">
+              <div class="picture">
+                  <img src="assets/img/recent/2.png" alt="">
+              </div>
+              <div class="details">
+                  <h3>The 3D-Printed Bharata Bracelet Is Inspired by Ethnic</h3>
+                  <p>Technology</p>
+              </div>
+          </div>
+          <div class="card card3">
+              <div class="picture">
+                  <img src="assets/img/recent/3.png" alt="">
+              </div>
+              <div class="details">
+                  <h3>Iowa's Caitlin Clark stormed the sports world: What's next?</h3>
+                  <p>Sports</p>
+              </div>
+          </div>
+          <div class="card card4">
+              <div class="picture">
+                  <img src="assets/img/recent/4.png" alt="">
+              </div>
+              <div class="details">
+                  <h3>Sony Black Friday deals: PS5, TVs, headphones, soundbars, and more</h3>
+                  <p>Technology</p>
+              </div>
+          </div>
+          <div class="card card5">
+              <div class="picture">
+                  <img src="assets/img/recent/5.png" alt="">
+              </div>
+              <div class="details">
+                  <h3>Disney will soon own all of Hulu. How the company got here and what's next.</h3>
+                  <p>Entertainment</p>
+              </div>
+          </div>
+          <div class="card card6">
+              <div class="picture">
+                  <img src="assets/img/recent/6.png" alt="">
+              </div>
+              <div class="details">
+                  <h3>As Israel-Hamas war flares, chaos grips Britain with Braverman sacked</h3>
+                  <p>Politics</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- TECHNOLOGY -->
+<!-- <div class="tech">
+  <a href="techno.html"><p class="topic">Technology</p></a>
+    <div class="divider"></div>
+     <div class="grid-container">
+        <div class="info">
+          <div class="left">
+            <img src="assets/img/technology/1.png" alt="">
+          </div>
+          <div class="title">
+            <a href="tech.html"><h3>Mega-cap firm valuations fall amid rising rates, tech earnings concerns</h3></a>
+          </div>
+          <div class="content">
+            <p>Google parent Alphabet's (GOOGL.O) market capitalization dropped nearly 6% to $1.56 trillion at the end of October</p>
+          </div>
+        </div>
+
+        <div class="message">
+          <p class="headline">Criticism</p>
+            <div class="chat">
+              <form action="">
+                <p>If you have a criticism about the appearance of our website, write here.</p>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email" required />
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message" required></textarea>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    <!-- DON'T MISS -->
+    <!-- <div class="recentNews">
+      <p class="head">Don't Miss</p>
+      <div class="divider"></div>
+    <div data-aos="fade-right">
+      <div class="cards">
+        <div class="card card1">
+            <div class="details">
+                <h3>Review: Chloe Domont's 'Fair Play' Poignantly Tackles Gender Politics</h3>
+                <p>Lifestyle</p>
+            </div>
+        </div>
+        <div class="card card2">
+            <div class="details">
+                <h3>Trouble Brewing for RISC-V as Issue of Technology Transfer is Questioned</h3>
+                <p>Technology</p>
+            </div>
+        </div>
+        <div class="card card3">
+            <div class="details">
+                <h3>School board elections are latest battleground for polarized national politics</h3>
+                <p>Sports</p>
+            </div>
+        </div>
+        <div class="card card4">
+            <div class="details">
+                <h3>Kentucky Gov. Andy Beshear, a Democrat, has won reelection</h3>
+                <p>Technology</p>
+            </div>
+        </div>
+        <div class="card card5">
+            <div class="details">
+                <h3>The Leap from Project Manager to CEO Is Hard — But Not Impossible</h3>
+                <p>Entertainment</p>
+            </div>
+        </div>
+        <div class="card card6">
+            <div class="details">
+                <h3>Argentina's new far-right president Javier Milei takes cues from Trump</h3>
+                <p>Politics</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+   <!-- FOOTER -->
+        <div class="footer">
+          <div class="gg">
+              <img src="assets/img/logo/gg.png" alt="" width="35px" height="35px">
+            <h2>Globegaze</h2>
+            <p>"Breaking Boundaries, Connecting Continents: Your Window to the World."
+            </p>
+            <ul class="social">
+              <li><a class="ig" href="https://instagram.com/thisisglobegaze?igshid=OGQ5ZDc2ODk2ZA"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a class="linked" href="https://www.linkedin.com/in/globe-gaze-75093b299/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              <li><a class="twit" href="https://twitter.com/thisisglobegaze?t=G5w4d26cux9I01fbd0xi0A&s=09"><i class="fa-brands fa-x-twitter"></i></a></li>
+              <li><a class="fb" href="https://www.facebook.com/profile.php?id=61553347523426"><i class="fa-brands fa-facebook-f"></i></a></li>
+            </ul>
+          </div>
+          <div class="links">
+            <h2>Company</h2>
+            <ul>
+              <li>
+                <a href="aboutus.html">About Us</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact Us</a>
+              </li>
+              <li>
+                <a href="privacy.html">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="workatgg.html">Work at GlobeGaze</a>
+              </li>
+            </ul>
+          </div>
+          <div class="links">
+            <h2>Topics</h2>
+            <ul>
+              <li>
+                <a href="#">Lifestyle</a>
+              </li>
+              <li>
+                <a href="#">Technology</a>
+              </li>
+              <li>
+                <a href="#">Sports</a>
+              </li>
+              <li>
+                <a href="#">Entertainment</a>
+              </li>
+              <li>
+                <a href="#">Politics</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+          <div class="copyright">
+            <i class="fa-regular fa-copyright"></i>
+            <p>GlobeGaze 2023</p>
+          </p>
+  <!-- End Footer -->
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- MAIN JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- LOGIN JS -->
+  <script src="assets/js/login.js"></script>
+
+ 
+ </body>
+</html>

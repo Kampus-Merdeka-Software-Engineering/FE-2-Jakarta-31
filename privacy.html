@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/subs-login.css" />
+    <link rel="stylesheet" href="assets/css/privacy.css" />
+
+    <title>GlobeGaze</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="header-container-1">
+        <div class="head-1 container">
+          <div class="left">
+            <img src="assets/img/logo/gg.png" alt="" style="width: 5%; cursor: pointer" onclick="window.location.href='index.html'" />
+          </div>
+          <div class="right">
+            <button class="subs" id="open-subscribe-form-main"><p>Subscribe</p></button>
+            <button class="login" onclick="window.location.href='login.html'">
+              <i class="fa-solid fa-user-large"><span>Log In</span></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-container-2">
+        <div class="head-2 container">
+          <div class="left">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a class="hover-link nav-item" id="lifestyle" onclick="onNavItemClick('lifestyle')">Lifestyle</a></li>
+              <li><a class="hover-link nav-item" id="technology" onclick="onNavItemClick('technology')">Technology</a></li>
+            </ul>
+          </div>
+          <div class="center">
+            <h1>GlobeGaze</h1>
+          </div>
+          <div class="right">
+            <ul>
+              <li><a class="hover-link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</a></li>
+              <li><a class="hover-link nav-item" id="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</a></li>
+              <li><a class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-header">
+        <div class="left">
+          <button><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="right">
+          <div class="logo">
+            <h1>GlobeGaze</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="offconvas">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close">&times;</div>
+          <div class="divider"></div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lifestyle.html">Lifestyle</a></li>
+            <li><a href="techno.html">Technology</a></li>
+            <li><a href="sports.html">Sports</a></li>
+            <li><a href="entertain.html">Entertainment</a></li>
+            <li><a href="politics.html">Politics</a></li>
+            <div class="divider"></div>
+            <div class="follow">
+              <button class="subs" id="open-subscribe-form"><p>Subscribe</p></button>
+              <button class="login" onclick="window.location.href='login.html'">
+                <i class="fa-solid fa-user-large"><span>Log In</span></i>
+              </button>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subscribe -->
+    <div class="subscribe-form">
+      <div class="right">
+        <h2>Subscribe to GlobeGaze Today</h2>
+        <p>Join now to unlock a wealth of knowledge on a journey to enlightenment with GlobeGaze.</p>
+        <div class="form">
+          <div class="input">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+          </div>
+          <div class="button">
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn">&times;</button>
+    </div>
+
+    <!-- Content -->
+    <div class="privacypolicy">
+      <h1>Privacy Policy</h1>
+      <div class="divider"></div>
+    </div>
+    <div class="desc">
+      <div class="pp1">
+        <div class="black">Privacy Policy for GlobeGaze</div>
+        <div class="grey">Effective Date : 23 November 2013</div>
+      </div>
+      <div class="pp2">
+        <div class="black">1. Introduction</div>
+        <div class="grey">Welcome to GlobeGaze!</div>
+        <div class="grey">
+          We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines the types of information we may collect, how we use and safeguard that information, and your choices
+          concerning your personal information. Please read this Privacy Policy carefully.
+        </div>
+      </div>
+      <div class="pp3">
+        <div class="black">2. Information We Collect</div>
+        <div class="grey">
+          <li>
+            Personal Information : We may collect personally identifiable information (such as your name, email address, and phone number) when you voluntarily provide it to us, for example, when you sign up for newsletters, submit
+            comments, or participate in surveys or contests.
+          </li>
+          <li>
+            Non-Personal Information : We may also collect non-personal information, such as your IP address, browser type, and operating system. This information is used to improve the functionality of our website and understand user
+            behavior.
+          </li>
+        </div>
+      </div>
+      <div class="pp4">
+        <div class="black">3. How We Use Your Information</div>
+        <div class="grey">We may use your information for the following purposes :</div>
+        <div class="grey">
+          <li>To provide and personalize our content, services, and advertisements</li>
+          <li>To send newsletters, updates, and other communications you have opted to receive.</li>
+          <li>To improve our website, content, and user experience.</li>
+          <li>To analyze trends, track user engagement, and conduct research.</li>
+          <li>To respond to your inquiries or requests.</li>
+        </div>
+      </div>
+      <div class="pp5">
+        <div class="black">4. Cookies and Tracking Technologies</div>
+        <div class="grey">
+          We use cookies and similar tracking technologies to collect information about your interactions with our website. You can control cookies through your browser settings, but disabling them may limit your use of certain features on
+          our website.
+        </div>
+      </div>
+      <div class="pp6">
+        <div class="black">5. Data Sharing</div>
+        <div class="grey">We do not sell, trade, or transfer your personal information to third parties unless we have obtained your consent or are required to do so by law.</div>
+      </div>
+      <div class="pp7">
+        <div class="black">6. Third-Party Links</div>
+        <div class="grey">Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these third-party sites. We encourage you to review their respective privacy policies.</div>
+      </div>
+      <div class="pp8">
+        <div class="black">7. Security Measures</div>
+        <div class="grey">We take reasonable precautions to protect your personal information. However, no method of data transmission over the internet is entirely secure, and we cannot guarantee the security of your information.</div>
+      </div>
+      <div class="pp9">
+        <div class="black">8. Your Choices</div>
+        <div class="grey">
+          You have the right to access, update, or delete your personal information. You may also unsubscribe from our newsletters or marketing communications at any time by following the instructions provided in those communications.
+        </div>
+      </div>
+      <div class="pp10">
+        <div class="black">9. Changes to this Privacy Policy</div>
+        <div class="grey">We reserve the right to update this Privacy Policy to reflect changes in our practices and services. We encourage you to review this policy periodically.</div>
+      </div>
+      <div class="pp11">
+        <div class="black">10. Contact Us</div>
+        <div class="grey">If you have any questions or concerns regarding this Privacy Policy, please contact us at :</div>
+        <div class="grey">Phone : +44 456 789 1011</div>
+        <div class="grey">Email : thisisglobegaze@gmail.com</div>
+      </div>
+      <div class="pp12">
+        <div class="grey">By using our website, you consent to the terms outlined in this Privacy Policy.</div>
+      </div>
+    </div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="gg">
+      <img src="assets/img/logo/gg.png" alt="" width="35px" height="35px">
+    <h2>Globegaze</h2>
+    <p>"Breaking Boundaries, Connecting Continents: Your Window to the World."
+    </p>
+    <ul class="social">
+      <li><a class="ig" href="https://instagram.com/thisisglobegaze?igshid=OGQ5ZDc2ODk2ZA"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a class="linked" href="https://www.linkedin.com/in/globe-gaze-75093b299/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+      <li><a class="twit" href="https://twitter.com/thisisglobegaze?t=G5w4d26cux9I01fbd0xi0A&s=09"><i class="fa-brands fa-x-twitter"></i></a></li>
+      <li><a class="fb" href="https://www.facebook.com/profile.php?id=61553347523426"><i class="fa-brands fa-facebook-f"></i></a></li>
+    </ul>
+  </div>
+  <div class="links">
+    <h2>Company</h2>
+    <ul>
+      <li>
+        <a href="aboutus.html">About Us</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact Us</a>
+      </li>
+      <li>
+        <a href="privacy.html">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="workatgg.html">Work at GlobeGaze</a>
+      </li>
+    </ul>
+  </div>
+  <div class="links">
+    <h2>Topics</h2>
+    <ul>
+      <li>
+        <a href="lifestyle.html">Lifestyle</a>
+      </li>
+      <li>
+        <a href="techno.html">Technology</a>
+      </li>
+      <li>
+        <a href="sports.html">Sports</a>
+      </li>
+      <li>
+        <a href="entertain.html">Entertainment</a>
+      </li>
+      <li>
+        <a href="politics.html">Politics</a>
+      </li>
+    </ul>
+  </div>
+</div>
+  <div class="copyright">
+    <i class="fa-regular fa-copyright"></i>
+    <p>GlobeGaze 2023</p>
+  </p>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+    <!-- Main JS -->
+    <script src="assets/js/lifestyle.js"></script>
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>
