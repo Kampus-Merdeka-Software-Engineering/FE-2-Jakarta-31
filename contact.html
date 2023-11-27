@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/subs-login.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/contact.css">
 
     <title>GlobeGaze</title>
@@ -20,7 +21,7 @@
           </div>
           <div class="right">
             <button class="subs" id="open-subscribe-form-main"><p>Subscribe</p></button>
-            <button class="login" onclick="window.location.href='login.html'"><i class="fa-solid fa-user-large"><span>Log In</span></i></button>
+            <button class="login"><i class="fa-solid fa-user-large"><span>Log In</span></i></button>
           </div>
         </div>
       </div>
@@ -75,7 +76,7 @@
             <div class="divider"></div>
             <div class="follow">
               <button class="subs" id="open-subscribe-form"><p>Subscribe</p></button>
-              <button class="login" onclick="window.location.href='login.html'"><i class="fa-solid fa-user-large"><span>Log In</span></i></button>
+              <button class="login"><i class="fa-solid fa-user-large"><span>Log In</span></i></button>
             </div>
           </ul>
         </div>
@@ -100,6 +101,59 @@
       <button class="close-btn">&times;</button>
     </div>
 
+    <!-- LOGIN/REGISTRASI FORM -->
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+      <i class="close-btn fa-solid fa-xmark"></i>
+        <div class="form-box login">
+        <div class="form-details">
+          <h2>Welcome Back</h2>
+          <p>Please login using your email & password</p>
+        </div>
+        <div class="form-content">
+          <h2>LOG IN</h2>
+          <form action="#" id="login-form" class="log">
+            <div class="input-data">
+              <input type="text" id="email" placeholder="Email">
+            </div>
+              <div class="input-data">
+                <input type="password" name="password" id="password" placeholder="Password">
+              </div>
+              <button type="submit">Log In</button>
+          </form>
+          <div class="bottom-link">
+            Don't have an account?
+            <a href="#" id="regis-link">Sign Up</a>     
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box signup">
+        <div class="form-details">
+          <h2>Create Account</h2>
+          <p>Use your email for registeration</p>
+        </div>
+        <div class="form-content">
+          <h2>SIGN UP</h2>
+          <form action="#" id="regis-form" class="log">
+            <div class="input-data">
+              <input type="text" name="name" id="name" placeholder="Name">
+            </div>
+            <div class="input-data">
+              <input type="text" id="email" placeholder="Email">
+            </div>
+              <div class="input-data">
+                <input type="password" name="password" id="password" placeholder="Password">
+              </div>
+              <button type="submit">Sign Up</button>
+          </form>
+          <div class="bottom-link">
+            Already have an account?
+            <a href="#" id="login-link">Log In</a>     
+          </div>
+        </div>
+      </div>
+    </div>
 
 <!-- Content -->
   <div class="contactus">

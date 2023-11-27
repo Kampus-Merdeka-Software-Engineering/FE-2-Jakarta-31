@@ -622,6 +622,74 @@ section {
   }
 }
 
+@media screen and (max-width: 600px) {
+  nav {
+    grid-area: nav;
+  }
+
+  main {
+    grid-area: content;
+  }
+
+  aside {
+    grid-area: sidebar;
+  }
+
+  .container-2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "nav sidebar" "content content";
+    margin-top: 3rem;
+  }
+
+  .trending-1,
+  .trending-3 {
+    grid-column: 1fr 1fr;
+    grid-row: span 2;
+    margin-left: 7rem;
+    z-index: -100;
+  }
+
+  .trending-1 img,
+  .trending-3 img {
+    width: 100%;
+    width: 300px;
+  }
+
+  .trending-2 .primary {
+    width: 100%;
+    width: 700px;
+    margin-left: 10rem;
+  }
+
+  .trending-2 a {
+    display: block;
+    font-size: 24px;
+    margin-right: 7rem;
+    margin-left: 9.4rem;
+  }
+
+  .trending-2 h6 {
+    margin-left: 9rem;
+    margin-right: 6rem;
+  }
+
+  .wrt p {
+    display: block;
+    margin-left: 17.3rem;
+    z-index: -1;
+  }
+
+  .wrt img {
+    display: none;
+  }
+
+  .trending-2 .trend .divider {
+    margin-left: 8rem;
+    width: 100%;
+    width: 715px;
+  }
+}
+
 /* RECENT NEWS */
 .recentNews .head {
   display: flex;
@@ -749,236 +817,164 @@ section {
   }
 }
 
-/* TECHNOLOGY NEWS */
-.grid-container {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1.5fr 1.2fr;
-  grid-template-areas: "left right";
-  margin-bottom: 6rem;
+@media screen and (max-width: 600px) {
+  .recentNews .divider {
+    height: 1.5px;
+    width: 100%;
+    margin-top: 2rem;
+    background-color: #dcdcdc;
+    margin-left: 4rem;
+    min-width: 56rem;
+  }
+
+  .card1 {
+    grid-area: top;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+  }
+  .card2 {
+    grid-area: middle;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+  }
+  .card3 {
+    grid-area: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+  }
+  .card4 {
+    grid-area: top1;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+  }
+  .card5 {
+    grid-area: middle1;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+  }
+  .card6 {
+    grid-area: bottom1;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-areas: "top middle bottom" "top1 middle1 bottom1";
+    margin-left: 3rem;
+  }
 }
 
-.tech .topic {
-  margin-bottom: 2rem;
-  margin-left: 3.5rem;
+/* DONT MISS */
+.dontmiss .head {
   display: block;
   justify-content: center;
   text-align: left;
-  font-size: 25px;
+  font-size: 27px;
+  margin-left: 4rem;
+  font-weight: 600;
   background: linear-gradient(145deg, #9a0680, #79018c, #4c0070);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-weight: 600;
 }
 
-.tech .divider {
+.dontmiss .divider {
   height: 1.5px;
   width: 100%;
-  margin-bottom: 2rem;
-  margin-top: 15px;
+  margin-top: 2rem;
   background-color: #dcdcdc;
-  margin-left: 3.5rem;
-  max-width: 72rem;
+  margin-left: 4rem;
+  max-width: 70rem;
+  margin-bottom: 0.5rem;
 }
 
-.info {
-  margin-top: 1rem;
-  grid-area: left;
+.wrapping {
+  width: 900px;
+  height: 640px;
   margin-left: 5rem;
-  /* width: 100%; */
+  margin-top: 3rem;
+  background-color: white;
+  padding: 2rem 2rem;
+  position: relative;
 }
 
-.info .left img {
-  width: 100%;
-  min-width: 46rem;
+.textblock {
+  width: 45%;
 }
 
-.info .title {
-  font-size: 22.5px;
-  padding: 15px 0;
-}
-
-.info .title h3 {
-  display: block;
-  color: black;
-}
-
-.info .content {
-  font-family: Poppins;
-  font-size: 16px;
-  font-weight: 600;
-  color: #61615f;
-}
-
-.message {
-  grid-area: right;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 320px;
-  min-width: 300px;
-  height: 430px;
-  margin-left: 2.5rem;
-  font-size: 20px;
-  font-family: Poppins;
-  background: linear-gradient(310deg, #4c0070, #79018c, #9a0680);
-  border-radius: 1px;
-  color: white;
-  z-index: -1;
-  margin-top: 1rem;
-}
-
-.message .headline {
-  margin: 18px 13px;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-form p {
-  margin: 0 18px;
+.textblock .heading {
   text-align: center;
+  text-transform: capitalize;
   margin-bottom: 1.5rem;
-  font-size: 13px;
 }
 
-label {
-  color: white;
-  font-size: 16px;
-  justify-content: left;
-  display: flex;
-  margin: 20px;
-  margin-left: 15px;
-  font-weight: 500;
-  cursor: pointer;
+.textblock .sub-heading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #61615f;
+  margin-bottom: 1.8rem;
 }
 
-input {
-  width: 100%;
-  max-width: 15.3rem;
-  height: 20px;
-  background-color: #dcdcdc;
-  justify-content: center;
-  display: flex;
-  margin: 0 2.3rem;
-  margin-top: -9px;
-  padding: 20px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  font-family: Poppins;
+.textblock p {
+  margin-bottom: 1.3rem;
 }
 
-textarea {
-  width: 100%;
-  max-width: 15.3rem;
-  height: 70px;
-  background-color: #dcdcdc;
-  justify-content: center;
-  display: flex;
-  margin: 0 auto;
-  margin-top: -9px;
-  margin-bottom: 20px;
-  padding: 20px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  font-family: Poppins;
+.read {
+  border: 1px solid #160040;
+  padding: 10px 15px;
+  margin-top: 8px;
+  display: inline-block;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #9a0680, #79018c, #4c0070);
+  color: #d3d3d3;
 }
 
-form button {
-  width: 100%;
-  max-width: 15.3rem;
-  height: 40px;
-  background-color: #dcdcdc;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  margin: 20px auto;
-  padding: 10px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #160040;
+.read:hover {
   color: white;
 }
 
-@media screen and (max-width: 992px) {
-  .tech .divider {
+.wrapping img {
+  position: absolute;
+  top: 20%;
+  right: -22.5%;
+  width: 600px;
+  height: 350px;
+  box-shadow: 5px 4px 10px rgba(37, 37, 37, 0.5);
+}
+
+/* RESPONSIVE DONT MISS */
+@media only screen and (max-width: 1187px) {
+  .dontmiss .divider {
     height: 1.5px;
     width: 100%;
-    margin-bottom: 2rem;
-    margin-top: 15px;
+    margin-top: 2rem;
     background-color: #dcdcdc;
     margin-left: 4rem;
     min-width: 52rem;
   }
-
-  .grid-container {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(2, max(230px, 1fr));
-    grid-template-areas: "left right";
-    /* position: relative; */
-  }
-
-  .info {
-    grid-area: left;
-    margin-left: 3.2rem;
-    /* width: 100%; */
-  }
-
-  .message {
-    display: block;
-    margin-top: 0.8rem;
-    width: 100%;
-    margin-left: 3rem;
+  .wrapping {
+    width: 800px;
     height: 400px;
-    position: relative;
   }
-
-  label {
-    color: white;
-    font-size: 16px;
-    justify-content: left;
-    display: flex;
-    margin: 10px;
-    margin-left: 33px;
-    font-weight: bold;
-    cursor: pointer;
+  .textblock {
+    width: 700px;
+    padding-left: 2rem;
   }
-
-  input {
-    width: 75%;
-    height: 35px;
-    background-color: #dcdcdc;
-    justify-content: center;
-    display: flex;
-    margin: 10px auto;
-    padding: 10px;
+  .wrapping img {
+    display: none;
   }
+}
 
-  textarea {
-    width: 75%;
-    height: 70px;
-    background-color: #dcdcdc;
-    justify-content: center;
-    display: flex;
-    margin: 10px auto;
-    padding: 10px;
-  }
-
-  .info .left img {
-    width: 100%;
-    min-width: 500px;
-    max-width: 500px;
+@media only screen and (max-width: 600px) {
+  .wrapping {
+    margin-left: 7rem;
   }
 }
 
@@ -998,7 +994,7 @@ form button:hover {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-gap: 20px;
-  z-index: -1;
+  z-index: inherit;
 }
 
 .gg h2 {
@@ -1147,7 +1143,7 @@ form button:hover {
     min-height: 100%;
     height: 300px;
     min-width: 100%;
-    width: 1010px;
+    width: 1030px;
   }
 
   .copyright {

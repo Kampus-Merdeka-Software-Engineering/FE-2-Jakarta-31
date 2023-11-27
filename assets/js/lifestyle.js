@@ -28,13 +28,11 @@ function fillDataInGrid(gridClone, article) {
   const newsImg = gridClone.querySelector("#news-img");
   const newsHeading = gridClone.querySelector("#news-heading");
   const newsDecs = gridClone.querySelector("#news-desc");
-  // const newsAuthor = gridClone.querySelector("#news-author");
   const newsSource = gridClone.querySelector("#news-source");
 
   newsImg.src = article.urlToImage;
   newsHeading.innerHTML = article.title;
   newsDecs.innerHTML = article.description;
-  // newsAuthor.innerHTML = article.author;
 
   const date = new Date(article.publishedAt).toLocaleString("en-US", {
     timeZone: "Asia/Jakarta",
@@ -43,8 +41,20 @@ function fillDataInGrid(gridClone, article) {
   newsSource.innerHTML = `${article.source.name} · ${date}`;
 
   gridClone.firstElementChild.addEventListener("click", () => {
-    window.open(article.url, "_blank");
+    displaySelectedNews(article);
   });
+}
+
+function displaySelectedNews(article) {
+  const gridsContainer = document.getElementById("grids-container");
+  gridsContainer.innerHTML = `
+    <h1 style="flex: 1; text-align: center">${article.title}</h1>
+    <p style="display: none;">${article.source.name}</p>
+    <p>${article.description}</p>
+    <img src="${article.urlToImage}" alt="News Image" style="width:900px; margin-left: 6rem;">
+    <span>${article.content}</span>
+    <p>${new Date(article.publishedAt).toLocaleString("en-US", { timeZone: "Asia/Jakarta" })}</p>
+  `;
 }
 
 function onNavItemClick(id) {
