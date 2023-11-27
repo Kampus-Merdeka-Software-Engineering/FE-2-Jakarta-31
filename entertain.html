@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/subs-login.css">
 
     <title>GlobeGaze</title>
   </head>
@@ -78,6 +79,79 @@
               <button class="login"><i class="fa-solid fa-user-large"><span>Log In</span></i></button>
             </div>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="subscribe-form">
+      <div class="right">
+        <h2>Subscribe to GlobeGaze Today</h2>
+        <p>Join now to unlock a wealth of knowledge on a journey to enlightenment with GlobeGaze.</p>
+        <div class="form">
+          <div class="input">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="button">
+            <button type="submit">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn">&times;</button>
+    </div>
+
+
+    <!-- LOGIN/REGISTRASI FORM -->
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+      <i class="close-btn fa-solid fa-xmark"></i>
+        <div class="form-box login">
+        <div class="form-details">
+          <h2>Welcome Back</h2>
+          <p>Please login using your email & password</p>
+        </div>
+        <div class="form-content">
+          <h2>LOG IN</h2>
+          <form action="#" id="login-form" class="log">
+            <div class="input-data">
+              <input type="text" id="email" placeholder="Email">
+            </div>
+              <div class="input-data">
+                <input type="password" name="password" id="password" placeholder="Password">
+              </div>
+              <button type="submit">Log In</button>
+          </form>
+          <div class="bottom-link">
+            Don't have an account?
+            <a href="#" id="regis-link">Sign Up</a>     
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box signup">
+        <div class="form-details">
+          <h2>Create Account</h2>
+          <p>Use your email for registeration</p>
+        </div>
+        <div class="form-content">
+          <h2>SIGN UP</h2>
+          <form action="#" id="regis-form" class="log">
+            <div class="input-data">
+              <input type="text" name="name" id="name" placeholder="Name">
+            </div>
+            <div class="input-data">
+              <input type="text" id="email" placeholder="Email">
+            </div>
+              <div class="input-data">
+                <input type="password" name="password" id="password" placeholder="Password">
+              </div>
+              <button type="submit">Sign Up</button>
+          </form>
+          <div class="bottom-link">
+            Already have an account?
+            <a href="#" id="login-link">Log In</a>     
+          </div>
         </div>
       </div>
     </div>
@@ -168,5 +242,6 @@
     <!-- Main JS -->
     <script src="assets/js/entertain.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/login.js"></script>
   </body>
 </html>
