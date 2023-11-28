@@ -43,8 +43,22 @@ function fillDataInGrid(gridClone, article) {
   newsSource.innerHTML = `${article.source.name} · ${date}`;
 
   gridClone.firstElementChild.addEventListener("click", () => {
-    window.open(article.url, "_blank");
+    displaySelectedNews(article);
   });
+}
+
+function displaySelectedNews(article) {
+  const gridsContainer = document.getElementById("grids-container");
+  gridsContainer.innerHTML = `
+    <div class="news-content">
+      <h1 class="heading">${article.title}</h1>
+      <p class="date">${new Date(article.publishedAt).toLocaleString("en-US", { timeZone: "Asia/Jakarta" })}</p>
+      <img class="image" src="${article.urlToImage}" alt="News Image">
+      <p class="sub-content">${article.description}</p>
+      <p class="source">By ${article.source.name}</p>
+      <span>${article.content}</span>
+    </div>
+  `;
 }
 
 function onNavItemClick(id) {
