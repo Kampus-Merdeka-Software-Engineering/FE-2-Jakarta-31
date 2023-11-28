@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css/subs-login.css">
+    <link rel="stylesheet" href="assets/css/subs-login.css" />
 
     <title>GlobeGaze</title>
   </head>
@@ -21,11 +21,13 @@
           </div>
           <div class="right">
             <button class="subs"><p>Subscribe</p></button>
-            <button class="login"><i class="fa-solid fa-user-large"><span>Log In</span></i></button>
+            <button class="login">
+              <i class="fa-solid fa-user-large"><span>Log In</span></i>
+            </button>
           </div>
         </div>
       </div>
-  
+
       <div class="header-container-2">
         <div class="head-2 container">
           <div class="left">
@@ -47,7 +49,7 @@
           </div>
         </div>
       </div>
-    
+
       <div class="mobile-header">
         <div class="left">
           <button><i class="fa-solid fa-bars"></i></button>
@@ -76,7 +78,9 @@
             <div class="divider"></div>
             <div class="follow">
               <button class="subs" type="button"><p>Subscribe</p></button>
-              <button class="login"><i class="fa-solid fa-user-large"><span>Log In</span></i></button>
+              <button class="login">
+                <i class="fa-solid fa-user-large"><span>Log In</span></i>
+              </button>
             </div>
           </ul>
         </div>
@@ -91,7 +95,7 @@
         <div class="form">
           <div class="input">
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required />
           </div>
           <div class="button">
             <button type="submit">Subscribe</button>
@@ -101,12 +105,10 @@
       <button class="close-btn">&times;</button>
     </div>
 
-
     <!-- LOGIN/REGISTRASI FORM -->
-    <div class="blur-bg-overlay"></div>
     <div class="form-popup">
       <i class="close-btn fa-solid fa-xmark"></i>
-        <div class="form-box login">
+      <div class="form-box login">
         <div class="form-details">
           <h2>Welcome Back</h2>
           <p>Please login using your email & password</p>
@@ -115,16 +117,16 @@
           <h2>LOG IN</h2>
           <form action="#" id="login-form" class="log">
             <div class="input-data">
-              <input type="text" id="email" placeholder="Email">
+              <input type="text" id="email" placeholder="Email" />
             </div>
-              <div class="input-data">
-                <input type="password" name="password" id="password" placeholder="Password">
-              </div>
-              <button type="submit">Log In</button>
+            <div class="input-data">
+              <input type="password" name="password" id="password" placeholder="Password" />
+            </div>
+            <button type="submit">Log In</button>
           </form>
           <div class="bottom-link">
             Don't have an account?
-            <a href="#" id="regis-link">Sign Up</a>     
+            <a href="#" id="regis-link">Sign Up</a>
           </div>
         </div>
       </div>
@@ -138,101 +140,106 @@
           <h2>SIGN UP</h2>
           <form action="#" id="regis-form" class="log">
             <div class="input-data">
-              <input type="text" name="name" id="name" placeholder="Name">
+              <input type="text" name="name" id="name" placeholder="Name" />
             </div>
             <div class="input-data">
-              <input type="text" id="email" placeholder="Email">
+              <input type="text" id="email" placeholder="Email" />
             </div>
-              <div class="input-data">
-                <input type="password" name="password" id="password" placeholder="Password">
-              </div>
-              <button type="submit">Sign Up</button>
+            <div class="input-data">
+              <input type="password" name="password" id="password" placeholder="Password" />
+            </div>
+            <button type="submit">Sign Up</button>
           </form>
           <div class="bottom-link">
             Already have an account?
-            <a href="#" id="login-link">Log In</a>     
+            <a href="#" id="login-link">Log In</a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- cards -->
+    <!-- CARDS -->
     <section>
-        <div class="grids-container container flex" id="grids-container">
-            
-        </div>
+      <div class="grids-container container flex" id="grids-container"></div>
     </section>
 
     <template id="template-news-grid">
-        <div class="grid">
-            <div class="grid-img">
-                <img src="" alt="news-image" id="news-img">
-            </div>
-            <div class="grid-content">
-                <!-- <h6 class="news-author" id="news-author">End Gadget</h6> -->
-                <h6 class="news-source" id="news-source"></h6>
-                <h3 id="news-heading">This is the Heading</h3>
-                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facilis veniam hic. Nihil sed molestiae tenetur voluptatum</p>
-            </div>
+      <div class="grid">
+        <div class="grid-img">
+          <img src="" alt="news-image" id="news-img" />
         </div>
+        <div class="grid-content">
+          <!-- <h6 class="news-author" id="news-author">End Gadget</h6> -->
+          <h6 class="news-source" id="news-source"></h6>
+          <h3 id="news-heading">This is the Heading</h3>
+          <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facilis veniam hic. Nihil sed molestiae tenetur voluptatum</p>
+        </div>
+      </div>
     </template>
 
-<!-- FOOTER -->
-<div class="footer">
-  <div class="gg">
-      <img src="assets/img/logo/gg.png" alt="" width="35px" height="35px">
-    <h2>Globegaze</h2>
-    <p>"Breaking Boundaries, Connecting Continents: Your Window to the World."
-    </p>
-    <ul class="social">
-      <li><a class="ig" href="https://instagram.com/thisisglobegaze?igshid=OGQ5ZDc2ODk2ZA"><i class="fa-brands fa-instagram"></i></a></li>
-      <li><a class="linked" href="https://www.linkedin.com/in/globe-gaze-75093b299/"><i class="fa-brands fa-linkedin-in"></i></a></li>
-      <li><a class="twit" href="https://twitter.com/thisisglobegaze?t=G5w4d26cux9I01fbd0xi0A&s=09"><i class="fa-brands fa-x-twitter"></i></a></li>
-      <li><a class="fb" href="https://www.facebook.com/profile.php?id=61553347523426"><i class="fa-brands fa-facebook-f"></i></a></li>
-    </ul>
-  </div>
-  <div class="links">
-    <h2>Company</h2>
-    <ul>
-      <li>
-        <a href="aboutus.html">About Us</a>
-      </li>
-      <li>
-        <a href="contact.html">Contact Us</a>
-      </li>
-      <li>
-        <a href="privacy.html">Privacy Policy</a>
-      </li>
-      <li>
-        <a href="workatgg.html">Work at GlobeGaze</a>
-      </li>
-    </ul>
-  </div>
-  <div class="links">
-    <h2>Topics</h2>
-    <ul>
-      <li>
-        <a href="lifestyle.html">Lifestyle</a>
-      </li>
-      <li>
-        <a href="techno.html">Technology</a>
-      </li>
-      <li>
-        <a href="sports.html">Sports</a>
-      </li>
-      <li>
-        <a href="entertain.html">Entertainment</a>
-      </li>
-      <li>
-        <a href="politics.html">Politics</a>
-      </li>
-    </ul>
-  </div>
-</div>
-  <div class="copyright">
-    <i class="fa-regular fa-copyright"></i>
-    <p>GlobeGaze 2023</p>
-  </p>
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="gg">
+        <img src="assets/img/logo/gg.png" alt="" width="35px" height="35px" />
+        <h2>Globegaze</h2>
+        <p>"Breaking Boundaries, Connecting Continents: Your Window to the World."</p>
+        <ul class="social">
+          <li>
+            <a class="ig" href="https://instagram.com/thisisglobegaze?igshid=OGQ5ZDc2ODk2ZA"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a class="linked" href="https://www.linkedin.com/in/globe-gaze-75093b299/"><i class="fa-brands fa-linkedin-in"></i></a>
+          </li>
+          <li>
+            <a class="twit" href="https://twitter.com/thisisglobegaze?t=G5w4d26cux9I01fbd0xi0A&s=09"><i class="fa-brands fa-x-twitter"></i></a>
+          </li>
+          <li>
+            <a class="fb" href="https://www.facebook.com/profile.php?id=61553347523426"><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="links">
+        <h2>Company</h2>
+        <ul>
+          <li>
+            <a href="aboutus.html">About Us</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact Us</a>
+          </li>
+          <li>
+            <a href="privacy.html">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="workatgg.html">Work at GlobeGaze</a>
+          </li>
+        </ul>
+      </div>
+      <div class="links">
+        <h2>Topics</h2>
+        <ul>
+          <li>
+            <a href="lifestyle.html">Lifestyle</a>
+          </li>
+          <li>
+            <a href="techno.html">Technology</a>
+          </li>
+          <li>
+            <a href="sports.html">Sports</a>
+          </li>
+          <li>
+            <a href="entertain.html">Entertainment</a>
+          </li>
+          <li>
+            <a href="politics.html">Politics</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <i class="fa-regular fa-copyright"></i>
+      <p>GlobeGaze 2023</p>
+    </div>
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

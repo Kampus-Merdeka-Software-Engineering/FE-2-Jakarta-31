@@ -48,12 +48,14 @@ function fillDataInGrid(gridClone, article) {
 function displaySelectedNews(article) {
   const gridsContainer = document.getElementById("grids-container");
   gridsContainer.innerHTML = `
-    <h1 style="flex: 1; text-align: center">${article.title}</h1>
-    <p style="display: none;">${article.source.name}</p>
-    <p>${article.description}</p>
-    <img src="${article.urlToImage}" alt="News Image" style="width:900px; margin-left: 6rem;">
-    <span>${article.content}</span>
-    <p>${new Date(article.publishedAt).toLocaleString("en-US", { timeZone: "Asia/Jakarta" })}</p>
+    <div class="news-content">
+      <h1 class="heading">${article.title}</h1>
+      <p class="date">${new Date(article.publishedAt).toLocaleString("en-US", { timeZone: "Asia/Jakarta" })}</p>
+      <img class="image" src="${article.urlToImage}" alt="News Image">
+      <p class="sub-content">${article.description}</p>
+      <p class="source">By ${article.source.name}</p>
+      <span>${article.content}</span>
+    </div>
   `;
 }
 

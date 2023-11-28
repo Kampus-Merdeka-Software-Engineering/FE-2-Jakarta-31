@@ -48,11 +48,6 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
-/* 
-.subscribe-form .left {
-  display: flex;
-  align-items: ;
-} */
 
 .subscribe-form .right h2 {
   font-size: 20px;
@@ -113,7 +108,7 @@ body {
 }
 
 /* LOGIN & REGISTER */
-.blur-bg-overlay {
+/* .blur-bg-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -128,7 +123,7 @@ body {
 .show-popup .blur-bg-overlay {
   opacity: 1;
   pointer-events: auto;
-}
+} */
 
 .form-popup {
   position: fixed;

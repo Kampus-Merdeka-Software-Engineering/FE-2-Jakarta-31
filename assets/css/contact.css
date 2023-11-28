@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 
-/* Content */
+/* CONTENT */
 .contactus {
   justify-content: center;
   max-width: 100%;
@@ -196,7 +196,184 @@ a {
     padding-left: 20px;
   }
 }
-/* End Content Responsive */
+
+/* CRITICISM */
+h1,
+h2,
+p,
+form,
+label,
+input,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.space {
+  margin-top: 100px;
+}
+.message {
+  grid-area: center;
+  justify-content: center;
+  align-items: center;
+  width: 63%;
+  margin: auto;
+  font-size: 20px;
+  font-family: Poppins;
+  background: linear-gradient(310deg, #4c0070, #79018c, #9a0680);
+  border-radius: 1px;
+  color: white;
+  z-index: -1;
+  padding: 20px;
+  border: 1px solid #ba55d3;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+  border-radius: 8px;
+}
+
+.headline {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.chat form {
+  display: flex;
+  flex-direction: column;
+}
+
+form p {
+  margin: 0 18px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 15px;
+  animation: fadeIn 6s ease-in-out;
+}
+
+.chat form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: white;
+  font-size: 16px;
+  justify-content: left;
+  display: flex;
+  margin: 20px;
+  margin-left: 3.6rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  max-width: 40rem;
+  height: 20px;
+  background-color: #dcdcdc;
+  justify-content: center;
+  display: flex;
+  margin-left: 3.5rem;
+  margin-top: -9px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: Poppins;
+  border: 1px solid #dda0dd;
+}
+
+textarea {
+  width: 100%;
+  max-width: 40rem;
+  height: 70px;
+  background-color: #dcdcdc;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  margin-top: -9px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: Poppins;
+  border: 1px solid #dda0dd;
+}
+
+form button {
+  width: 100%;
+  max-width: 14rem;
+  height: 40px;
+  background-color: #dcdcdc;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #160040;
+  color: white;
+}
+/* End Criticism*/
+
+/* Responsive Criticism*/
+@media screen and (max-width: 992px) {
+  .message {
+    display: block;
+    width: 35rem;
+    position: relative;
+    grid-area: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 11rem;
+  }
+
+  label {
+    color: white;
+    font-size: 16px;
+    justify-content: left;
+    display: flex;
+    margin: 10px;
+    margin-left: 33px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  input {
+    width: 90%;
+    height: 35px;
+    background-color: #dcdcdc;
+    justify-content: center;
+    display: flex;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  textarea {
+    width: 90%;
+    height: 70px;
+    background-color: #dcdcdc;
+    justify-content: center;
+    display: flex;
+    margin: 10px auto;
+    padding: 10px;
+  }
+}
+/* End Responsive Criticism*/
 
 /* FOOTER */
 .footer {

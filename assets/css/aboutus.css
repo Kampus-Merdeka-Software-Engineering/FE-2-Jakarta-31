@@ -1,7 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  /* scroll-behavior: smooth; */
 }
 
 body .recents {
@@ -21,11 +20,11 @@ a {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-size: 40px;
-  font-weight: 700;
 }
 
 .aboutus h1 {
+  font-size: 35px;
+  font-weight: 600;
   display: block;
   margin-left: 3.5rem;
   margin-top: 2rem;
@@ -40,19 +39,6 @@ a {
   background-color: #dcdcdc;
   margin-left: 3.5rem;
   max-width: 72rem;
-}
-
-.setence {
-  display: block;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.setence p {
-  margin-left: 9rem;
-  margin-right: auto;
-  font-size: 23px;
 }
 
 .desc {
@@ -101,6 +87,21 @@ a {
 }
 
 /* Our Team */
+.setence {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  min-width: 990px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.setence p {
+  font-size: 20px;
+  display: block;
+  padding: 0 15rem;
+}
+
 .team {
   box-sizing: border-box;
   position: relative;
@@ -168,7 +169,10 @@ a {
   border-radius: 15px;
   transition: all 0.38 ease;
   width: 100%;
-  min-width: 13rem;
+  min-width: 10rem;
+  padding: 0 10px;
+  padding-top: 25px;
+  padding-bottom: 24px;
 }
 
 .bio h3 {
@@ -217,7 +221,7 @@ a {
     font-family: Poppins;
     justify-content: center;
     padding: 0 100px;
-    margin-left: 1rem;
+    margin-left: 2.7rem;
     margin-right: auto;
   }
 
