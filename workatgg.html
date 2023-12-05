@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/subs-login.css" />
     <link rel="stylesheet" href="assets/css/workatgg.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- <link rel="stylesheet" href="assets/css/styles.css" /> -->
 
     <title>GlobeGaze</title>
   </head>
@@ -17,7 +17,7 @@
       <div class="header-container-1">
         <div class="head-1 container">
           <div class="left">
-            <img src="assets/img/logo/gg.png" alt="" style="width: 5%" />
+            <img src="assets/img/logo/gg.png" alt="" style="width: 6%" />
           </div>
           <div class="right">
             <button class="subs" id="open-subscribe-form-main"><p>Subscribe</p></button>
@@ -33,8 +33,8 @@
           <div class="left">
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="lifestyle.html">Lifestyle</a></li>
-              <li><a href="techno.html">Technology</a></li>
+              <li><a href="newstopic.html" class="nav-link" data-topic="lifestyle" onclick="onNavItemClick('lifestyle')">Lifestyle</a></li>
+              <li><a href="newstopic.html" class="nav-link" data-topic="technology" onclick="onNavItemClick('technology')">Technology</a></li>
             </ul>
           </div>
           <div class="center">
@@ -42,9 +42,9 @@
           </div>
           <div class="right">
             <ul>
-              <li><a href="sports.html">Sports</a></li>
-              <li><a href="entertain.html">Entertainment</a></li>
-              <li><a href="politics.html">Politics</a></li>
+              <li><a href="newstopic.html" class="nav-link" data-topic="sports" onclick="onNavItemClick('sports')">Sports</a></li>
+              <li><a href="newstopic.html" class="nav-link" data-topic="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</a></li>
+              <li><a href="newstopic.html" class="nav-link" data-topic="politics" onclick="onNavItemClick('politics')">Politics</a></li>
             </ul>
           </div>
         </div>
@@ -70,11 +70,11 @@
           <div class="divider"></div>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="lifestyle.html">Lifestyle</a></li>
-            <li><a href="techno.html">Technology</a></li>
-            <li><a href="sports.html">Sports</a></li>
-            <li><a href="entertain.html">Entertainment</a></li>
-            <li><a href="politics.html">Politics</a></li>
+            <li><a href="newstopic.html" class="nav-link" data-topic="lifestyle" onclick="onNavItemClick('lifestyle')">Lifestyle</a></li>
+            <li><a href="newstopic.html" class="nav-link" data-topic="technology" onclick="onNavItemClick('technology')">Technology</a></li>
+            <li><a href="newstopic.html" class="nav-link" data-topic="sports" onclick="onNavItemClick('sports')">Sports</a></li>
+            <li><a href="newstopic.html" class="nav-link" data-topic="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</a></li>
+            <li><a href="newstopic.html" class="nav-link" data-topic="politics" onclick="onNavItemClick('politics')">Politics</a></li>
             <div class="divider"></div>
             <div class="follow">
               <button class="subs" id="open-subscribe-form"><p>Subscribe</p></button>
@@ -87,7 +87,7 @@
       </div>
     </div>
 
-    <!-- Subscribe -->
+    <!-- SUBSCRIBE -->
     <div class="subscribe-form">
       <div class="right">
         <h2>Subscribe to GlobeGaze Today</h2>
@@ -95,33 +95,31 @@
         <div class="form">
           <div class="input">
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" />
+            <input type="text" id="email" name="email" placeholder="Enter your email" required />
           </div>
           <div class="button">
-            <button>Subscribe</button>
+            <button type="button" onclick="subscribe()">Subscribe</button>
           </div>
         </div>
+        <p id="subscription-message"></p>
       </div>
-      <button class="close-btn">&times;</button>
+      <button class="close-btn" onclick="closeSubscribeForm()">&times;</button>
     </div>
 
     <!-- LOGIN/REGISTRASI FORM -->
-    <div class="blur-bg-overlay"></div>
     <div class="form-popup">
       <i class="close-btn fa-solid fa-xmark"></i>
       <div class="form-box login">
-        <div class="form-details">
-          <h2>Welcome Back</h2>
-          <p>Please login using your email & password</p>
-        </div>
         <div class="form-content">
-          <h2>LOG IN</h2>
+          <h2>log in</h2>
           <form action="#" id="login-form" class="log">
             <div class="input-data">
-              <input type="text" id="email" placeholder="Email" />
+              <input type="text" id="email" required />
+              <label for="">Email</label>
             </div>
             <div class="input-data">
-              <input type="password" name="password" id="password" placeholder="Password" />
+              <input type="password" name="password" id="password" required />
+              <label for="">Password</label>
             </div>
             <button type="submit">Log In</button>
           </form>
@@ -133,21 +131,20 @@
       </div>
 
       <div class="form-box signup">
-        <div class="form-details">
-          <h2>Create Account</h2>
-          <p>Use your email for registeration</p>
-        </div>
         <div class="form-content">
-          <h2>SIGN UP</h2>
+          <h2>sign up</h2>
           <form action="#" id="regis-form" class="log">
             <div class="input-data">
-              <input type="text" name="name" id="name" placeholder="Name" />
+              <input type="text" name="name" id="name" required />
+              <label for="">Name</label>
             </div>
             <div class="input-data">
-              <input type="text" id="email" placeholder="Email" />
+              <input type="text" id="email" required />
+              <label for="">Email</label>
             </div>
             <div class="input-data">
-              <input type="password" name="password" id="password" placeholder="Password" />
+              <input type="password" name="password" id="password" required />
+              <label for="">Password</label>
             </div>
             <button type="submit">Sign Up</button>
           </form>
@@ -227,7 +224,7 @@
     <!-- FOOTER -->
     <div class="footer">
       <div class="gg">
-        <img src="assets/img/logo/gg.png" alt="" width="35px" height="35px" />
+        <img src="assets/img/logo/gg.png" alt="" style="width: 10%" />
         <h2>Globegaze</h2>
         <p>"Breaking Boundaries, Connecting Continents: Your Window to the World."</p>
         <ul class="social">
@@ -266,19 +263,19 @@
         <h2>Topics</h2>
         <ul>
           <li>
-            <a href="lifestyle.html">Lifestyle</a>
+            <a href="newstopic.html" class="nav-link" data-topic="lifestyle" onclick="onNavItemClick('lifestyle')">Lifestyle</a>
           </li>
           <li>
-            <a href="techno.html">Technology</a>
+            <a href="newstopic.html" class="nav-link" data-topic="technology" onclick="onNavItemClick('technology')">Technology</a>
           </li>
           <li>
-            <a href="sports.html">Sports</a>
+            <a href="newstopic.html" class="nav-link" data-topic="sports" onclick="onNavItemClick('sports')">Sports</a>
           </li>
           <li>
-            <a href="entertain.html">Entertainment</a>
+            <a href="newstopic.html" class="nav-link" data-topic="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</a>
           </li>
           <li>
-            <a href="politics.html">Politics</a>
+            <a href="newstopic.html" class="nav-link" data-topic="politics" onclick="onNavItemClick('politics')">Politics</a>
           </li>
         </ul>
       </div>
@@ -297,5 +294,6 @@
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/login.js"></script>
+    <script src="assets/js/newstopic.js"></script>
   </body>
 </html>

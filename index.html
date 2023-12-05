@@ -30,8 +30,8 @@
           <div class="left">
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="lifestyle.html">Lifestyle</a></li>
-              <li><a href="techno.html">Technology</a></li>
+              <li><a href="newstopic.html" id="lifestyle" onclick="onNavItemClick('lifestyle')">Lifestyle</a></li>
+              <li><a href="newstopic.html" id="technology" onclick="onNavItemClick('technology')">Technology</a></li>
             </ul>
           </div>
           <div class="center">
@@ -39,9 +39,9 @@
           </div>
           <div class="right">
             <ul>
-              <li><a href="sports.html">Sports</a></li>
-              <li><a href="entertain.html">Entertainment</a></li>
-              <li><a href="politics.html">Politics</a></li>
+              <li><a href="newstopic.html" id="sports" onclick="onNavItemClick('sports')">Sports</a></li>
+              <li><a href="newstopic.html" id="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</a></li>
+              <li><a href="newstopic.html" id="politics" onclick="onNavItemClick('politics')">Politics</a></li>
             </ul>
           </div>
         </div>
@@ -67,11 +67,11 @@
           <div class="divider"></div>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="lifestyle.html">Lifestyle</a></li>
-            <li><a href="techno.html">Technology</a></li>
-            <li><a href="sports.html">Sports</a></li>
-            <li><a href="entertain.html">Entertainment</a></li>
-            <li><a href="politics.html">Politics</a></li>
+            <li><a href="newstopic.html" class="nav-link" data-topic="lifestyle" onclick="onNavItemClick('lifestyle')">Lifestyle</a></li>
+            <li><a href="newstopic.html" class="nav-link" data-topic="technology" onclick="onNavItemClick('technology')">Technology</a></li>
+            <li><a href="newstopic.html" class="nav-link" data-topic="sports" onclick="onNavItemClick('sports')">Sports</a></li>
+            <li><a href="newstopic.html" class="nav-link" data-topic="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</a></li>
+            <li><a href="newstopic.html" class="nav-link" data-topic="politics" onclick="onNavItemClick('politics')">Politics</a></li>
             <div class="divider"></div>
             <div class="follow">
               <button class="subs-mobile" id="open-subscribe-form"><p>Subscribe</p></button>
@@ -93,29 +93,28 @@
             <input type="text" id="email" name="email" placeholder="Enter your email" required>
           </div>
           <div class="button">
-            <button type="submit">Subscribe</button>
+            <button type="button" onclick="subscribe()">Subscribe</button>
           </div>
         </div>
+        <p id="subscription-message"></p>
       </div>
-      <button class="close-btn">&times;</button>
+      <button class="close-btn" onclick="closeSubscribeForm()">&times;</button>
     </div>
 
     <!-- LOGIN/REGISTRASI FORM -->
     <div class="form-popup">
       <i class="close-btn fa-solid fa-xmark"></i>
         <div class="form-box login">
-        <div class="form-details">
-          <h2>Welcome Back</h2>
-          <p>Please login using your email & password</p>
-        </div>
         <div class="form-content">
-          <h2>LOG IN</h2>
+          <h2>log in</h2>
           <form action="#" id="login-form" class="log">
             <div class="input-data">
-              <input type="text" id="email" placeholder="Email" required>
+              <input type="text" id="email" required>
+              <label for="">Email</label>
             </div>
               <div class="input-data">
-                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="password" name="password" id="password" required>
+                <label for="">Password</label>
               </div>
               <button type="submit">Log In</button>
           </form>
@@ -127,21 +126,20 @@
       </div>
 
       <div class="form-box signup">
-        <div class="form-details">
-          <h2>Create Account</h2>
-          <p>Use your email for registeration</p>
-        </div>
         <div class="form-content">
-          <h2>SIGN UP</h2>
+          <h2>sign up</h2>
           <form action="#" id="regis-form" class="log">
             <div class="input-data">
-              <input type="text" name="name" id="name" placeholder="Name" required>
+              <input type="text" name="name" id="name" required>
+              <label for="">Name</label>
             </div>
             <div class="input-data">
-              <input type="text" id="email" placeholder="Email" required>
+              <input type="text" id="email" required>
+              <label for="">Email</label>
             </div>
               <div class="input-data">
-                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="password" name="password" id="password" required>
+                <label for="">Password</label>
               </div>
               <button type="submit">Sign Up</button>
           </form>
@@ -154,64 +152,64 @@
     </div>
    
     <!-- TRENDING NEWS -->
-      <div data-aos="fade-down"  data-aos-duration="750">
-        <div class="container-2">
-         <nav>
-           <div class="trending-1">
-             <div class="trend">
-               <div class="left-1">
-                 <img src="assets/img/trending/1.png" alt="gb 1" />
-                 <a href="trend-1.html"><h3 class="heading-1">NFL 2023 Midseason Report: AFC, NFC Questions and Stats</h3></a>
-                 <p>Nation Reporters</p>
-                 <div class="divider"></div>
-               </div>
-               <div class="left-2">
-                 <img src="assets/img/trending/2.png" alt="gb 2" />
-                 <a href="trend-2.html"><h3 class="heading-2">The Hot New Thing in Social Media Is Here. Again.</h3></a>
-                 <p>Madison Malone K.</p>
-                 <div class="divider"></div>
-               </div>
+    <div data-aos="fade-down"  data-aos-duration="750">
+      <div class="container-2">
+       <nav>
+         <div class="trending-1">
+           <div class="trend">
+             <div class="left-1">
+               <img src="assets/img/trending/1.png" alt="gb 1" />
+               <a href="newscontent/trend1.html"><h3 class="heading-1">How F1 plays into Las Vegas' six-year rise as a sports city</h3></a>
+               <p>Nate Saunders</p>
+               <div class="divider"></div>
+             </div>
+             <div class="left-2">
+               <img src="assets/img/trending/2.png" alt="gb 2" />
+               <a href="newscontent/trend2.html"><h3 class="heading-2">Chris Evans Avengers Return, as if He Could Say Anything Else</h3></a>
+               <p>Germain Lussier</p>
+               <div class="divider"></div>
              </div>
            </div>
-         </nav>
-    
-         <main>
-           <div class="trending-2">
-             <div class="trend">
-               <div class="center">
-                 <img class="primary" src="assets/img/trending/3.png" alt="gb 3" />
-                 <a href="trend-3.html"><h3 class="heading-3">FBI director: Antisemitism reaching 'historic level' in US</h3></a>
-                 <h6> FBI Director Christopher Wray said Tuesday that antisemitism is reaching “historic levels” in the United States.</h6>
-                 <div class="wrt">
-                   <img src="assets/img/trending/p-1.png" alt="" />
-                   <p>Hannah Rabinowitz</p>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </main>
-         
-         <aside>
-           <div class="trending-3">
-             <div class="trend">
-               <div class="right-1">
-                 <img src="assets/img/trending/4.png" alt="gb 4" />
-                 <a href="trend-4.html"><h3 class="heading-4">wave to earth Delivers Heartfelt Night at Sold-Out LA Concert</h3></a>
-                 <p>Erica</p>
-                 <div class="divider"></div>
-               </div>
-               <div class="right-2">
-                 <img src="assets/img/trending/5.png" alt="gb 5" />
-                 <a href="trend-5.html"><h3 class="heading-5">Nam Joo Hyuk Plays a Dark Hero in Disney+ K-Drama "Vigilante"</h3></a>
-                 <p>Lily Alice</p>
-                 <div class="divider"></div>
+         </div>
+       </nav>
+  
+       <main>
+         <div class="trending-2">
+           <div class="trend">
+             <div class="center">
+               <img class="primary" src="assets/img/trending/3.png" alt="gb 3" />
+               <a href="newscontent/trend3.html"><h3 class="heading-3">Sen. Joe Manchin announces he won't seek reelection in 2024</h3></a>
+               <h6>West Virginia Democrat Joe Manchin will not seek reelection to the Senate in 2024, Democrats have a narrow majority and face and uphill battle to retain his seat.</h6>
+               <div class="wrt">
+                 <img src="assets/img/trending/p-1.png" alt="" />
+                 <p>Deirdre Walsh</p>
                </div>
              </div>
            </div>
          </div>
-       </aside>
-     </div>
+       </main>
+       
+       <aside>
+         <div class="trending-3">
+           <div class="trend">
+             <div class="right-1">
+               <img src="assets/img/trending/4.png" alt="gb 4" />
+               <a href="newscontent/trend4.html"><h3 class="heading-4">The Verge’s 2023 gaming and entertainment holiday gift guide</h3></a>
+               <p>Antonio G. </p>
+               <div class="divider"></div>
+             </div>
+             <div class="right-2">
+               <img src="assets/img/trending/5.png" alt="gb 5" />
+               <a href="newscontent/trend5.html"><h3 class="heading-5">Amazon’s Answer to ChatGPT Is a Workplace Assistant Called Q</h3></a>
+               <p>Will Knight</p>
+               <div class="divider"></div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </aside>
    </div>
+ </div>
 
     <!-- RECENT NEWS -->
     <div class="recentNews">
@@ -224,8 +222,8 @@
                   <img src="assets/img/recent/1.png" alt="">
               </div>
               <div class="details">
-                  <h3>Embracing the Mediterranean Lifestyle at Zel Mallorca</h3>
-                  <p>Lifestyle</p>
+                  <h3 onclick="window.location.href='newscontent/recent1.html'">Ukraine war: Fierce row erupts over 2024 election</h3>
+                  <p>Politics</p>
               </div>
           </div>
           <div class="card card2">
@@ -233,7 +231,7 @@
                   <img src="assets/img/recent/2.png" alt="">
               </div>
               <div class="details">
-                  <h3>The 3D-Printed Bharata Bracelet Is Inspired by Ethnic</h3>
+                  <h3 onclick="window.location.href='newscontent/recent2.html'">The 3D-Printed Bharata Bracelet Is Inspired by Ethnic</h3>
                   <p>Technology</p>
               </div>
           </div>
@@ -242,7 +240,7 @@
                   <img src="assets/img/recent/3.png" alt="">
               </div>
               <div class="details">
-                  <h3>Iowa's Caitlin Clark stormed the sports world: What's next?</h3>
+                  <h3 onclick="window.location.href='newscontent/recent3.html'">Iowa's Caitlin Clark stormed the sports world: What's next?</h3>
                   <p>Sports</p>
               </div>
           </div>
@@ -251,8 +249,8 @@
                   <img src="assets/img/recent/4.png" alt="">
               </div>
               <div class="details">
-                  <h3>Sony Black Friday deals: PS5, TVs, headphones, soundbars, and more</h3>
-                  <p>Technology</p>
+                  <h3 onclick="window.location.href='newscontent/recent4.html'">Revolut rivoluziona i piani a pagamento: accesso agli abbonamenti lifestyle</h3>
+                  <p>Lifestyle</p>
               </div>
           </div>
           <div class="card card5">
@@ -260,7 +258,7 @@
                   <img src="assets/img/recent/5.png" alt="">
               </div>
               <div class="details">
-                  <h3>Disney will soon own all of Hulu. How the company got here and what's next.</h3>
+                  <h3 onclick="window.location.href='newscontent/recent5.html'">Disney will soon own all of Hulu. How the company got here and what's next.</h3>
                   <p>Entertainment</p>
               </div>
           </div>
@@ -269,7 +267,7 @@
                   <img src="assets/img/recent/6.png" alt="">
               </div>
               <div class="details">
-                  <h3>As Israel-Hamas war flares, chaos grips Britain with Braverman sacked</h3>
+                  <h3 onclick="window.location.href='newscontent/recent6.html'">As Israel-Hamas war flares, chaos grips Britain with Braverman sacked</h3>
                   <p>Politics</p>
               </div>
           </div>
@@ -287,7 +285,7 @@
           <h4 class="sub-heading"> REBECCA BARKER</h4>
           <p>When design studio Industrial Facility partnered with Herman Miller to launch the first iteration of its OE1 line in 2021, the debate over how COVID-19 would impact the future of work was alive and well. 
             Now, two years later, we seem to have our answer: Most people who once commuted into the office five days a week have adapted to a hybrid lifestyle, where work can take place from anywhere.</p>
-          <a href="#" class="read">Read more</a>
+          <a href="newscontent/dontmiss.html" class="read">Read more</a>
         </div>
         <img src="assets/img/dontmiss/download (5).jpeg" alt="">
       </div>
@@ -296,8 +294,8 @@
    <!-- FOOTER -->
    <div class="footer">
     <div class="gg">
-        <img src="assets/img/logo/gg.png" alt="" width="35px" height="35px">
-      <h2>Globegaze</h2>
+        <img class="image" src="assets/img/logo/gg.png" alt="" style="width: 10%;">
+      <h2>GlobeGaze</h2>
       <p>"Breaking Boundaries, Connecting Continents: Your Window to the World."
       </p>
       <ul class="social">
@@ -328,19 +326,19 @@
       <h2>Topics</h2>
       <ul>
         <li>
-          <a href="#">Lifestyle</a>
+          <a href="newstopic.html" class="nav-link" data-topic="lifestyle" onclick="onNavItemClick('lifestyle')">Lifestyle</a>
         </li>
         <li>
-          <a href="#">Technology</a>
+          <a href="newstopic.html" class="nav-link" data-topic="technology" onclick="onNavItemClick('technology')">Technology</a>
         </li>
         <li>
-          <a href="#">Sports</a>
+          <a href="newstopic.html" class="nav-link" data-topic="sports" onclick="onNavItemClick('sports')">Sports</a>
         </li>
         <li>
-          <a href="#">Entertainment</a>
+          <a href="newstopic.html" class="nav-link" data-topic="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</a>
         </li>
         <li>
-          <a href="#">Politics</a>
+          <a href="newstopic.html" class="nav-link" data-topic="politics" onclick="onNavItemClick('lifestyle')">Politics</a>
         </li>
       </ul>
     </div>
@@ -358,6 +356,7 @@
 
   <!-- MAIN JS -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/newstopic.js"></script>
 
   <!-- LOGIN JS -->
   <script src="assets/js/login.js"></script>
