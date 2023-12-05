@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../assets/css/subs-login.css" />
+    <link rel="stylesheet" href="../assets/css/newscontent.css" />
+
+    <title>GlobeGaze</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <div class="header-container-1">
+        <div class="head-1 container">
+          <div class="left">
+            <img src="../assets/img/logo/gg.png" alt="" style="width: 6%" />
+          </div>
+          <div class="right">
+            <button class="subs" id="open-subscribe-form-main"><p>Subscribe</p></button>
+            <button class="login">
+              <i class="fa-solid fa-user-large"><span>Log In</span></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-container-2">
+        <div class="head-2 container">
+          <div class="left">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../lifestyle.html">Lifestyle</a></li>
+              <li><a href="../techno.html">Technology</a></li>
+            </ul>
+          </div>
+          <div class="center">
+            <h1>GlobeGaze</h1>
+          </div>
+          <div class="right">
+            <ul>
+              <li><a href="../sports.html">Sports</a></li>
+              <li><a href="../entertain.html">Entertainment</a></li>
+              <li><a href="../politics.html">Politics</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-header">
+        <div class="left">
+          <button><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="right">
+          <div class="logo">
+            <h1>GlobeGaze</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="offconvas">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close">&times;</div>
+          <div class="divider"></div>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../lifestyle.html">Lifestyle</a></li>
+            <li><a href="../techno.html">Technology</a></li>
+            <li><a href="../sports.html">Sports</a></li>
+            <li><a href="../entertain.html">Entertainment</a></li>
+            <li><a href="../politics.html">Politics</a></li>
+            <div class="divider"></div>
+            <div class="follow">
+              <button class="subs-mobile" id="open-subscribe-form"><p>Subscribe</p></button>
+              <button class="login-mobile">
+                <i class="fa-solid fa-user-large"><span>Log In</span></i>
+              </button>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="subscribe-form">
+      <div class="right">
+        <h2>Subscribe to GlobeGaze Today</h2>
+        <p>Join now to unlock a wealth of knowledge on a journey to enlightenment with GlobeGaze.</p>
+        <div class="form">
+          <div class="input">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+          <div class="button">
+            <button type="submit">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn">&times;</button>
+    </div>
+
+    <!-- LOGIN/REGISTRASI FORM -->
+    <div class="form-popup">
+      <i class="close-btn fa-solid fa-xmark"></i>
+      <div class="form-box login">
+        <div class="form-details">
+          <h2>Welcome Back</h2>
+          <p>Please login using your email & password</p>
+        </div>
+        <div class="form-content">
+          <h2>LOG IN</h2>
+          <form action="#" id="login-form" class="log">
+            <div class="input-data">
+              <input type="text" id="email" placeholder="Email" required />
+            </div>
+            <div class="input-data">
+              <input type="password" name="password" id="password" placeholder="Password" required />
+            </div>
+            <button type="submit">Log In</button>
+          </form>
+          <div class="bottom-link">
+            Don't have an account?
+            <a href="#" id="regis-link">Sign Up</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-box signup">
+        <div class="form-details">
+          <h2>Create Account</h2>
+          <p>Use your email for registeration</p>
+        </div>
+        <div class="form-content">
+          <h2>SIGN UP</h2>
+          <form action="#" id="regis-form" class="log">
+            <div class="input-data">
+              <input type="text" name="name" id="name" placeholder="Name" required />
+            </div>
+            <div class="input-data">
+              <input type="text" id="email" placeholder="Email" required />
+            </div>
+            <div class="input-data">
+              <input type="password" name="password" id="password" placeholder="Password" required />
+            </div>
+            <button type="submit">Sign Up</button>
+          </form>
+          <div class="bottom-link">
+            Already have an account?
+            <a href="#" id="login-link">Log In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEWS CONTENT -->
+    <div class="news-content">
+      <h1 class="heading">Sen. Joe Manchin announces he won't seek reelection in 2024</h1>
+      <p class="date">11/16/2023, 7:08:31 AM</p>
+      <img src="../assets/img/trending/8.png" alt="" class="image" />
+      <p class="sub-content">Sen. Joe Manchin, D-W.Va., stands as the elevator doors close, after a closed-door caucus meeting at the Capitol on Sept. 28.</p>
+      <p class="source">By Deirdre Walsh</p>
+      <p>
+        West Virginia Democratic Sen. Joe Manchin announced Thursday that he will not run for reelection in 2024. The long-awaited decision by the red-state Democrat means the party faces an uphill climb to keep its narrow majority in next
+        year's election. Democrats already faced a tough map in 2024 to keep control of the U.S. Senate. They have 23 seats on the ballot and the most contested ones are in the Republican-leaning states of Ohio, Montana and West Virginia.
+        Manchin, who's 76, says he accomplished what he set out to do for his home state. But he added he's not done with politics. <br /><br />
+        "I will finish my term while traveling the country and speaking out to see if there is interest in building a movement to mobilize the middle, find common ground, and bring Americans together," Manchin said in a video posted online.
+        <br /><br />
+        Manchin has previously suggested he might be open to a third-party bid for president. He has appeared at events for the group No Labels as it explores what it calls a potential "unity" presidential ticket. <br /><br />
+        Manchin had faced a tough reelection fight in his home state. High-profile West Virginia Republicans were already running against him, including Gov. Jim Justice and Rep. Alex Mooney. The head of the Senate GOP's campaign committee,
+        Montana Sen. Steve Daines, released a statement saying "we like our odds in West Virginia."
+      </p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="gg">
+        <img src="../assets/img/logo/gg.png" alt="" width="35px" height="35px" />
+        <h2>Globegaze</h2>
+        <p>"Breaking Boundaries, Connecting Continents: Your Window to the World."</p>
+        <ul class="social">
+          <li>
+            <a class="ig" href="https://instagram.com/thisisglobegaze?igshid=OGQ5ZDc2ODk2ZA"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a class="linked" href="https://www.linkedin.com/in/globe-gaze-75093b299/"><i class="fa-brands fa-linkedin-in"></i></a>
+          </li>
+          <li>
+            <a class="twit" href="https://twitter.com/thisisglobegaze?t=G5w4d26cux9I01fbd0xi0A&s=09"><i class="fa-brands fa-x-twitter"></i></a>
+          </li>
+          <li>
+            <a class="fb" href="https://www.facebook.com/profile.php?id=61553347523426"><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="links">
+        <h2>Company</h2>
+        <ul>
+          <li>
+            <a href="../aboutus.html">About Us</a>
+          </li>
+          <li>
+            <a href="../contact.html">Contact Us</a>
+          </li>
+          <li>
+            <a href="../privacy.html">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="../workatgg.html">Work at GlobeGaze</a>
+          </li>
+        </ul>
+      </div>
+      <div class="links">
+        <h2>Topics</h2>
+        <ul>
+          <li>
+            <a href="../lifestyle.html">Lifestyle</a>
+          </li>
+          <li>
+            <a href="../techno.html">Technology</a>
+          </li>
+          <li>
+            <a href="../sports.html">Sports</a>
+          </li>
+          <li>
+            <a href="../entertain.html">Entertainment</a>
+          </li>
+          <li>
+            <a href="../politics.html">Politics</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <i class="fa-regular fa-copyright"></i>
+      <p>GlobeGaze 2023</p>
+    </div>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- MAIN JS -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- LOGIN JS -->
+    <script src="../assets/js/login.js"></script>
+  </body>
+</html>
