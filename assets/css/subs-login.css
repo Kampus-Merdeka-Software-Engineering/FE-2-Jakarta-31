@@ -111,9 +111,11 @@ body {
   box-shadow: 0 2px 2px #dcdcdc;
 }
 
-@media (min-width: 680px) {
+@media (max-width: 768px) {
   .subscribe-form {
-    grid-template-columns: repeat(2, 1fr);
+    display: block;
+    position: fixed;
+    margin-left: -23.5rem;
   }
 }
 
@@ -261,17 +263,8 @@ form .input-data label {
 @media (max-width: 760px) {
   .form-popup {
     width: 95%;
-  }
-
-  .form-box .form-details {
-    display: none;
-  }
-
-  .form-box .form-content {
-    padding: 30px 20px;
-  }
-
-  .form-box .bottom-link {
-    text-align: center;
+    margin-top: -34rem;
+    transform: translateX(-2000px);
+    transition: 0.6s ease-in-out;
   }
 }
