@@ -14,9 +14,11 @@ if (isLoggedIn) {
   showLoggedInUI();
 }
 
-loginMobileButton.addEventListener("click", () => {
-  document.querySelector("body").classList.add("show-popup");
-});
+if (loginMobileButton) {
+  loginMobileButton.addEventListener("click", () => {
+    document.querySelector("body").classList.add("show-popup");
+  });
+}
 
 showPopup.addEventListener("click", () => {
   document.querySelector("body").classList.add("show-popup");
@@ -41,7 +43,7 @@ loginForm.addEventListener("submit", (e) => {
   if (email == "user@example.com" && password === "password") {
     sessionStorage.setItem("isLoggedIn", true);
     sessionStorage.setItem("username", email);
-    showLoggedInUI();
+    alert(`Welcome, ${username}!🙋🏻 You have Successfully logged in`);
   } else {
     alert("Invalid email or password. Please try again.");
   }
@@ -57,6 +59,8 @@ regisForm.addEventListener("submit", (e) => {
 
   sessionStorage.setItem("isLoggedIn", true);
   sessionStorage.setItem("username", email);
+  alert(`Welcome, ${name}!🙋🏻 You have Successfully logged in`);
+
   showLoggedInUI();
 
   document.querySelector("body").classList.remove("show-popup");
@@ -69,10 +73,6 @@ logoutButton.addEventListener("click", () => {
 });
 
 function showLoggedInUI() {
-  const username = sessionStorage.getItem("username");
-  const message = "Welcome, ${username}!🙋🏻 You have Successfully logged in";
-  alert(message);
-
   logoutButton.textContent = "Log Out";
 }
 

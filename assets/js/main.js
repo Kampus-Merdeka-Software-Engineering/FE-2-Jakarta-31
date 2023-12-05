@@ -11,15 +11,28 @@ document.querySelector(".close").onclick = function () {
 };
 
 // BUTTON SUBSCRIBE
+let isSubscribed = false;
+
 function subscribe() {
   const email = document.getElementById("email").value;
   const messageElement = document.getElementById("subscription-message");
 
   if (email) {
     alert("Thank's for subscribing!🤩");
+    isSubscribed = true;
+    updateSubscriptionUI();
     closeSubscribeForm();
   } else {
     alert("Please enter your email address first!");
+  }
+}
+
+function updateSubscriptionUI() {
+  const emailElement = document.getElementById("email");
+  if (isSubscribed) {
+    emailElement.style.display = "none";
+  } else {
+    emailElement.style.display = "block";
   }
 }
 
@@ -30,11 +43,13 @@ function closeSubscribeForm() {
 // Button Subscribe Navbar
 document.querySelector("#open-subscribe-form").addEventListener("click", function () {
   document.querySelector(".subscribe-form").classList.add("active");
+  updateSubscriptionUI();
 });
 
 // Button Subscribe Mobile
 document.querySelector("#open-subscribe-form-main").addEventListener("click", function () {
   document.querySelector(".subscribe-form").classList.add("active");
+  updateSubscriptionUI();
 });
 
 // Close Button
