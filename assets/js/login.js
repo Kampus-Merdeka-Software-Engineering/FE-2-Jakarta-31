@@ -6,6 +6,13 @@ const loginForm = document.getElementById("login-form");
 const regisForm = document.getElementById("regis-form");
 const logoutButton = document.querySelector(".login span");
 
+const isLoggedIn = sessionStorage.getItem("isLoggedIn") === "true";
+const username = sessionStorage.getItem("username");
+
+if (isLoggedIn) {
+  showLoggedInUI();
+}
+
 showPopup.addEventListener("click", () => {
   document.querySelector("body").classList.add("show-popup");
 });
@@ -23,16 +30,47 @@ logregLink.forEach((link) => {
 
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  logoutButton.textContent = "Log Out";
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  if (email == "user@example.com" && password === "password") {
+    sessionStorage.setItem("isLoggedIn", true);
+    sessionStorage.setItem("username", email);
+    showLoggedInUI();
+  } else {
+    alert("Invalid email or password. Please try again.");
+  }
+
   document.querySelector("body").classList.remove("show-popup");
 });
 
 regisForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  logoutButton.textContent = "Log Out";
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  sessionStorage.setItem("isLoggedIn", true);
+  sessionStorage.setItem("username", email);
+  showLoggedInUI();
+
   document.querySelector("body").classList.remove("show-popup");
 });
 
 logoutButton.addEventListener("click", () => {
-  logoutButton.textContent = "Log In";
+  sessionStorage.removeItem("isLoggedIn");
+  sessionStorage.removeItem("username");
+  showLoggedOutUI();
 });
+
+function showLoggedInUI() {
+  const username = sessionStorage.getItem("username");
+  const message = "Welcome, ${username}!🙋🏻 You have Successfully logged in";
+  alert(message);
+
+  logoutButton.textContent = "Log Out";
+}
+
+function showLoggedOutUI() {
+  logoutButton.textContent = "Log In";
+}
