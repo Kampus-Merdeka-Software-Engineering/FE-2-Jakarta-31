@@ -5,6 +5,7 @@ const logregLink = document.querySelectorAll(".form-box .bottom-link a");
 const loginForm = document.getElementById("login-form");
 const regisForm = document.getElementById("regis-form");
 const logoutButton = document.querySelector(".login span");
+const loginMobileButton = document.querySelector(".login-mobile");
 
 const isLoggedIn = sessionStorage.getItem("isLoggedIn") === "true";
 const username = sessionStorage.getItem("username");
@@ -12,6 +13,10 @@ const username = sessionStorage.getItem("username");
 if (isLoggedIn) {
   showLoggedInUI();
 }
+
+loginMobileButton.addEventListener("click", () => {
+  document.querySelector("body").classList.add("show-popup");
+});
 
 showPopup.addEventListener("click", () => {
   document.querySelector("body").classList.add("show-popup");
