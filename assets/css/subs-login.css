@@ -35,18 +35,28 @@ body {
   transition: top 0ms ease-in-out 0ms;
   transform: top 300ms ease-in-out 0ms;
   opacity: top 300ms ease-in-out 0ms;
+  margin-top: 26px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .subscribe-form .close-btn {
   position: absolute;
   top: 5px;
   right: 10px;
-  padding: 5px;
+  width: 25px;
+  height: 25px;
   font-size: 18px;
+  border-radius: 50%;
   color: #555;
   border: none;
-  background-color: transparent;
+  color: white;
+  background: #79018c;
   cursor: pointer;
+}
+
+.subscribe-form .close-btn:hover {
+  transform: scale(1.1);
 }
 
 .subscribe-form .right h2 {
@@ -108,28 +118,12 @@ body {
 }
 
 /* LOGIN & REGISTER */
-/* .blur-bg-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  pointer-events: none;
-  backdrop-filter: blur(5px);
-  transition: 0.1s ease;
-}
-
-.show-popup .blur-bg-overlay {
-  opacity: 1;
-  pointer-events: auto;
-} */
 
 .form-popup {
   position: fixed;
   top: 50%;
   left: 50%;
-  max-width: 720px;
+  max-width: 380px;
   width: 100%;
   pointer-events: none;
   opacity: 0;
@@ -145,35 +139,39 @@ body {
   pointer-events: auto;
   transform: translate(-50%, -50%);
   transition: transform 0.3s ease-in-out, opacity 0.1s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
 }
 
 .form-popup .fa-solid {
   position: absolute;
+  font-size: 17px;
   top: 12px;
   right: 12px;
   color: #160040;
   cursor: pointer;
+  background: #79018c;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 8.5px;
+  border-radius: 50%;
+  color: white;
+}
+
+.form-popup .fa-solid:hover {
+  transform: scale(1.1);
 }
 
 .form-popup .form-box {
   display: flex;
 }
 
-.form-box .form-details {
-  max-width: 330px;
-  display: flex;
-  width: 100%;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(145deg, #9a0680, #79018c, #4c0070);
-  color: white;
-}
-
 .form-box h2 {
   text-align: center;
   margin-bottom: 30px;
+  text-transform: capitalize;
 }
 
 .form-box .form-content {
@@ -182,26 +180,45 @@ body {
 }
 
 form .input-data {
-  height: 50px;
-  width: 100%;
-  margin-top: 20px;
+  position: relative;
+  margin: 20px 0;
+  margin-left: -7px;
 }
 
 form .input-data input {
-  width: 100%;
-  height: 100%;
+  width: 320px;
+  height: 40px;
+  font-size: 16px;
+  color: #333;
+  padding: 0 10px;
+  background: transparent;
+  border: 1px solid #333;
   outline: none;
-  padding: 0 15px;
-  font-size: 0.95rem;
-  border-radius: 3px;
-  border: 1px solid #717171;
+  border-radius: 5px;
 }
 
-.form-box a:hover {
-  background: linear-gradient(145deg, #9a0680, #79018c, #4c0070);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+form .input-data label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #333;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label {
+  top: 0;
+  font-size: 14px;
+  background-color: white;
+  color: #9a0680;
+}
+
+.input-data input:focus,
+.input-data input:valid {
+  border: 1.2px solid #9a0680;
 }
 
 .log button {
@@ -210,15 +227,27 @@ form .input-data input {
   border: none;
   font-size: 1rem;
   font-weight: 500;
-  padding: 14px 0;
+  padding: 10px 0;
   margin-top: 10px;
   color: white;
   cursor: pointer;
   background: linear-gradient(145deg, #9a0680, #79018c, #4c0070);
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .form-box .bottom-link {
   text-align: center;
+  font-size: 16px;
+}
+
+.form-box .bottom-link a {
+  font-weight: 700;
+  color: #79018c;
+}
+
+.form-box .bottom-link a:hover {
+  text-decoration: underline;
 }
 
 .form-popup .signup,

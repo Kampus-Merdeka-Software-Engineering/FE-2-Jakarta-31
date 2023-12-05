@@ -830,6 +830,7 @@ header {
   color: #d3d3d3;
   text-align: left;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .footer ul li a:hover {

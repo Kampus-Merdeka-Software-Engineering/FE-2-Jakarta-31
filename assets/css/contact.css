@@ -183,11 +183,11 @@ a {
     margin-top: 2rem;
     background-color: #dcdcdc;
     margin-left: 4rem;
-    min-width: 52rem;
+    min-width: 55rem;
   }
 
   .boxi {
-    margin-left: 2.2rem;
+    margin-left: 3.3rem;
     /* margin-bottom: 8rem; */
   }
 
@@ -292,14 +292,14 @@ input {
 textarea {
   width: 100%;
   max-width: 40rem;
-  height: 70px;
+  height: 130px;
   background-color: #dcdcdc;
   justify-content: center;
   display: flex;
-  margin: 0 auto;
+  margin-left: 3.5rem;
   margin-top: -9px;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 10px;
   border: none;
   outline: none;
   border-radius: 5px;
@@ -334,12 +334,12 @@ form button:hover {
 @media screen and (max-width: 992px) {
   .message {
     display: block;
-    width: 35rem;
+    width: 45rem;
     position: relative;
     grid-area: center;
     justify-content: center;
     align-items: center;
-    margin-left: 11rem;
+    margin-left: 9rem;
   }
 
   label {
@@ -485,6 +485,7 @@ form button:hover {
   color: #d3d3d3;
   text-align: left;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .footer ul li a:hover {
