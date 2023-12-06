@@ -835,10 +835,7 @@ header {
 
 .footer ul li a:hover {
   opacity: 1;
-  background: linear-gradient(to bottom, #d616b3, #79018c);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: white;
 }
 
 .footer .copyright {
