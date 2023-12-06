@@ -3,7 +3,7 @@
 * {
   padding: 0;
   margin: 0;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 body .recents {
@@ -334,7 +334,6 @@ header {
     background-clip: text;
     color: transparent;
     background-color: transparent;
-
     border: none;
     outline: none;
   }
@@ -356,8 +355,10 @@ section {
   flex-wrap: wrap;
   padding: 2.5rem 5.5rem;
   align-items: start;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   row-gap: 40px;
+  background-color: white;
+  padding-bottom: 7rem;
 }
 
 .grid {
@@ -618,7 +619,11 @@ section {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   grid-gap: 20px;
-  z-index: -100;
+  /* z-index: -100; */
+  background-color: white;
+  height: 100%;
+  min-height: 900px;
+  z-index: -10;
 }
 
 .trending-1 img,
@@ -707,7 +712,6 @@ section {
   position: relative;
   align-items: center;
   margin: 1rem 11rem;
-  z-index: -1;
 }
 
 .wrt p {
@@ -830,6 +834,11 @@ section {
 }
 
 /* RECENT NEWS */
+.recentNews {
+  background-color: white;
+  margin-top: -6rem;
+  padding-bottom: 3rem;
+}
 .recentNews .head {
   display: flex;
   margin-top: 3.5rem;
@@ -871,10 +880,18 @@ section {
   position: relative;
   cursor: pointer;
 }
+
+.card:hover {
+  box-shadow: 1px 1px 8px #d4ecff;
+  background-color: #f9fdff;
+  transform: scale(1.04);
+}
+
 .card {
   background: linear-gradient(145deg, #9a0680, #79018c, #4c0070);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .picture {
   position: relative;
@@ -895,7 +912,7 @@ section {
   margin-bottom: 2rem;
 }
 .details > p {
-  color: #a0a0a0;
+  color: #dcdcdc;
   font-size: 13px;
   line-height: 30px;
   font-weight: 500;
@@ -912,11 +929,6 @@ section {
     margin-left: 4rem;
     min-width: 52rem;
   }
-
-  /* .recentNews .head {
-    font-size: 40px;
-    font-style: italic;
-  } */
 
   .card1 {
     grid-area: top;
@@ -1017,6 +1029,11 @@ section {
 }
 
 /* DONT MISS */
+.dontmiss {
+  background-color: white;
+  height: 900px;
+}
+
 .dontmiss .head {
   display: block;
   justify-content: center;
@@ -1132,7 +1149,7 @@ section {
   font-family: Poppins;
   min-height: 100%;
   height: auto;
-  margin-top: 6rem;
+  margin-top: -1rem;
   min-width: 100%;
   width: 970px;
   justify-content: center;
@@ -1250,10 +1267,7 @@ section {
 
 .footer ul li a:hover {
   opacity: 1;
-  background: linear-gradient(to bottom, #d616b3, #79018c);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: white;
 }
 
 .footer .copyright {
