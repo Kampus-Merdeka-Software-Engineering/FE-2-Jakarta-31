@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="assets/css/subs-login.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/aboutus.css">
+    <link rel="stylesheet" href="assets/css/subs-login.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/aboutus.css" />
 
     <title>GlobeGaze</title>
   </head>
@@ -17,7 +17,7 @@
       <div class="header-container-1">
         <div class="head-1 container">
           <div class="left">
-            <img src="assets/img/logo/gg.png" alt="" style="width: 6%;"/>
+            <img src="assets/img/logo/gg.png" alt="" style="width: 6%" />
           </div>
           <div class="right">
             <button class="subs" id="open-subscribe-form-main"><p>Subscribe</p></button>
@@ -27,14 +27,14 @@
           </div>
         </div>
       </div>
- 
+
       <div class="header-container-2">
         <div class="head-2 container">
           <div class="left">
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="newstopic.html" class="nav-link" data-topic=""="lifestyle" onclick="onNavItemClick('lifestyle')">Lifestyle</a></li>
-              <li><a href="newstopic.html" class="nav-link" data-topic=""="technology" onclick="onNavItemClick('technology')">Technology</a></li>
+              <li><a href="newstopic.html" class="nav-link" data-topic="" ="lifestyle" onclick="onNavItemClick('lifestyle')">Lifestyle</a></li>
+              <li><a href="newstopic.html" class="nav-link" data-topic="" ="technology" onclick="onNavItemClick('technology')">Technology</a></li>
             </ul>
           </div>
           <div class="center">
@@ -42,13 +42,13 @@
           </div>
           <div class="right">
             <ul>
-              <li><a href="newstopic.html" class="nav-link" data-topic=""="sports" onclick="onNavItemClick('sports')">Sports</a></li>
-              <li><a href="newstopic.html" class="nav-link" data-topic=""="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</a></li>
-              <li><a href="newstopic.html" class="nav-link" data-topic=""="politics" onclick="onNavItemClick('politics')">Politics</a></li>
+              <li><a href="newstopic.html" class="nav-link" data-topic="" ="sports" onclick="onNavItemClick('sports')">Sports</a></li>
+              <li><a href="newstopic.html" class="nav-link" data-topic="" ="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</a></li>
+              <li><a href="newstopic.html" class="nav-link" data-topic="" ="politics" onclick="onNavItemClick('politics')">Politics</a></li>
             </ul>
           </div>
         </div>
-      </div> 
+      </div>
 
       <div class="mobile-header">
         <div class="left">
@@ -78,8 +78,9 @@
             <div class="divider"></div>
             <div class="follow">
               <button class="subs" id="open-subscribe-form"><p>Subscribe</p></button>
-              <button class="login-mobile"><i class="fa-solid fa-user-large"><span>Log In</span></i></button>
-
+              <button class="login-mobile">
+                <i class="fa-solid fa-user-large"><span>Log In</span></i>
+              </button>
             </div>
           </ul>
         </div>
@@ -94,7 +95,7 @@
         <div class="form">
           <div class="input">
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required />
           </div>
           <div class="button">
             <button type="button" onclick="subscribe()">Subscribe</button>
@@ -105,27 +106,26 @@
       <button class="close-btn" onclick="closeSubscribeForm()">&times;</button>
     </div>
 
-    
     <!-- LOGIN/REGISTRASI FORM -->
     <div class="form-popup">
       <i class="close-btn fa-solid fa-xmark"></i>
-        <div class="form-box login">
+      <div class="form-box login">
         <div class="form-content">
           <h2>log in</h2>
           <form action="#" id="login-form" class="log">
             <div class="input-data">
-              <input type="text" id="email" required>
+              <input type="text" id="email" required />
               <label for="">Email</label>
             </div>
-              <div class="input-data">
-                <input type="password" name="password" id="password" required>
-                <label for="">Password</label>
-              </div>
-              <button type="submit">Log In</button>
+            <div class="input-data">
+              <input type="password" name="password" id="password" required />
+              <label for="">Password</label>
+            </div>
+            <button type="submit">Log In</button>
           </form>
           <div class="bottom-link">
             Don't have an account?
-            <a href="#" id="regis-link">Sign Up</a>     
+            <a href="#" id="regis-link">Sign Up</a>
           </div>
         </div>
       </div>
@@ -135,182 +135,196 @@
           <h2>sign up</h2>
           <form action="#" id="regis-form" class="log">
             <div class="input-data">
-              <input type="text" name="name" id="name" required>
+              <input type="text" name="name" id="name" required />
               <label for="">Name</label>
             </div>
             <div class="input-data">
-              <input type="text" id="email" required>
+              <input type="text" id="email" required />
               <label for="">Email</label>
             </div>
-              <div class="input-data">
-                <input type="password" name="password" id="password" required>
-                <label for="">Password</label>
-              </div>
-              <button type="submit">Sign Up</button>
+            <div class="input-data">
+              <input type="password" name="password" id="password" required />
+              <label for="">Password</label>
+            </div>
+            <button type="submit">Sign Up</button>
           </form>
           <div class="bottom-link">
             Already have an account?
-            <a href="#" id="login-link">Log In</a>     
+            <a href="#" id="login-link">Log In</a>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Content -->
-  <div class="aboutus">
-    <h1>About GlobeGaze</h1>
-    <div class="divider"></div>
-  </div>
-  <div class="desc">
-    <p>At GlobeGaze, we are dedicated to bringing you the latest and most reliable news from around the world. Our mission is to provide you with up-to-date information on a wide range of topics, including politics, business, technology, fashion, sports, entertainment, and much more. <br> <br>
-       Our team of experienced journalists and editors works tirelessly to deliver news that matters to you. We are committed to journalistic integrity and strive to present a balanced and unbiased view of the stories we cover. With the ever-evolving landscape of information and technology, we understand the importance of staying ahead in the digital age. <br><br>
-       That's why we embrace cutting-edge technology and digital platforms to ensure that our news reaches you wherever you are. Thank you for choosing GlobeGaze as your trusted source of news. We value your trust and will continue to provide you with the latest news and insights. Your quest for knowledge and truth is what drives us every day. Stay informed with GlobeGaze, where news meets reliability.</p>
-  </div>
-<!-- End Content -->
+    <div class="aboutus">
+      <h1>About GlobeGaze</h1>
+      <div class="divider"></div>
+    </div>
+    <div class="desc">
+      <p>
+        At GlobeGaze, we are dedicated to bringing you the latest and most reliable news from around the world. Our mission is to provide you with up-to-date information on a wide range of topics, including politics, business, technology,
+        fashion, sports, entertainment, and much more. <br />
+        <br />
+        Our team of experienced journalists and editors works tirelessly to deliver news that matters to you. We are committed to journalistic integrity and strive to present a balanced and unbiased view of the stories we cover. With the
+        ever-evolving landscape of information and technology, we understand the importance of staying ahead in the digital age. <br /><br />
+        That's why we embrace cutting-edge technology and digital platforms to ensure that our news reaches you wherever you are. Thank you for choosing GlobeGaze as your trusted source of news. We value your trust and will continue to
+        provide you with the latest news and insights. Your quest for knowledge and truth is what drives us every day. Stay informed with GlobeGaze, where news meets reliability.
+      </p>
+    </div>
+    <!-- End Content -->
 
-<!-- About Team -->
-  <div class="team">
-    <div class="center">
-      <h1>Meet Our Team</h1>
-    <div class="divider"></div>
+    <!-- About Team -->
+    <div class="team">
+      <div class="center">
+        <h1>Meet Our Team</h1>
+        <div class="divider"></div>
+      </div>
+
+      <div class="setence">
+        <p>We Belong to Batch 5 Independent Study as Group 31 in the Jakarta Section of RevoU</p>
+      </div>
+
+      <div data-aos="zoom-out-up" data-aos-duration="700">
+        <div class="content">
+          <div class="bio">
+            <img src="assets/img/aboutus/nafis.png" alt="Nafis" />
+            <h3>Nashwan Nafis P.S</h3>
+            <h5>Group Leader & Quality Assurance</h5>
+            <div class="socmed">
+              <a href="https://www.instagram.com/nafis276" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/Nashwan-Nafis-Putra-Selian" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="bio">
+            <img src="assets/img/aboutus/maisie.png" alt="Maisie" />
+            <h3>Maisie Yunita Malva</h3>
+            <h5>Front End Engineer</h5>
+            <div class="socmed">
+              <a href="https://www.instagram.com/maisieyunita" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/maisie-yunita-malva-255814222" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="bio">
+            <img src="assets/img/aboutus/amel.png" alt="Amel" />
+            <h3>Amelia Maslaqun Naila</h3>
+            <h5>Front End Engineer</h5>
+            <div class="socmed">
+              <a href="https://www.instagram.com/ameeliamn" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/ameeliamn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="bio">
+            <img src="assets/img/aboutus/dylan.png" alt="Dylan" />
+            <h3>M. Dylan Ramadhan</h3>
+            <h5>Back End Engineer</h5>
+            <div class="socmed">
+              <a href="https://www.instagram.com/mdylanr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/muhammad-dylan-ramadhan" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="bio">
+            <img src="assets/img/aboutus/bella.png" alt="Bella" />
+            <h3>Bella Shintia</h3>
+            <h5>Back End Engineer</h5>
+            <div class="socmed">
+              <a href="https://www.instagram.com/bellasht_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/bella-shintia-194aa728b" target=",black"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="bio">
+            <img src="assets/img/aboutus/nadita.png" alt="Nadita" />
+            <h3>Nadita Khaerunisa</h3>
+            <h5>Quality Assurance</h5>
+            <div class="socmed">
+              <a href="https://www.instagram.com/naditaanisa" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/nadita-khaerunisa" target=",black"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End About Team -->
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="gg">
+        <img src="assets/img/logo/gg.png" alt="" style="width: 10%" />
+        <h2>Globegaze</h2>
+        <p>"Breaking Boundaries, Connecting Continents: Your Window to the World."</p>
+        <ul class="social">
+          <li>
+            <a class="ig" href="https://instagram.com/thisisglobegaze?igshid=OGQ5ZDc2ODk2ZA"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a class="linked" href="https://www.linkedin.com/in/globe-gaze-75093b299/"><i class="fa-brands fa-linkedin-in"></i></a>
+          </li>
+          <li>
+            <a class="twit" href="https://twitter.com/thisisglobegaze?t=G5w4d26cux9I01fbd0xi0A&s=09"><i class="fa-brands fa-x-twitter"></i></a>
+          </li>
+          <li>
+            <a class="fb" href="https://www.facebook.com/profile.php?id=61553347523426"><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="links">
+        <h2>Company</h2>
+        <ul>
+          <li>
+            <a href="aboutus.html">About Us</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact Us</a>
+          </li>
+          <li>
+            <a href="privacy.html">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="workatgg.html">Work at GlobeGaze</a>
+          </li>
+        </ul>
+      </div>
+      <div class="links">
+        <h2>Topics</h2>
+        <ul>
+          <li>
+            <a href="newstopic.html" class="nav-link" data-topic="lifestyle" onclick="onNavItemClick('lifestyle')">Lifestyle</a>
+          </li>
+          <li>
+            <a href="newstopic.html" class="nav-link" data-topic="technology" onclick="onNavItemClick('technology')">Technology</a>
+          </li>
+          <li>
+            <a href="newstopic.html" class="nav-link" data-topic="sports" onclick="onNavItemClick('sports')">Sports</a>
+          </li>
+          <li>
+            <a href="newstopic.html" class="nav-link" data-topic="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</a>
+          </li>
+          <li>
+            <a href="newstopic.html" class="nav-link" data-topic="politics" onclick="onNavItemClick('politics')">Politics</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p class="copy">Copyright</p>
+      <i class="fa-regular fa-copyright"></i>
+      <p>GlobeGaze 2023. RevoU X MSIB Batch 5</p>
     </div>
 
-    <div class="setence">
-      <p>We Belong to Batch 5 Independent Study as Group 31 in the Jakarta Section of RevoU</p>
-    </div>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
-    <div class="content">
-      <div class="bio">
-        <img src="assets/img/aboutus/nafis.png" alt="Nafis">
-        <h3>Nashwan Nafis P.S</h3>
-        <h5>Group Leader & Quality Assurance</h5>
-        <div class="socmed">
-          <a href="https://www.instagram.com/nafis276" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/Nashwan-Nafis-Putra-Selian" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-      </div>
-
-      <div class="bio">
-        <img src="assets/img/aboutus/maisie.png" alt="Maisie">
-        <h3>Maisie Yunita Malva</h3>
-        <h5>Front End Engineer</h5>
-        <div class="socmed">
-          <a href="https://www.instagram.com/maisieyunita" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/maisie-yunita-malva-255814222" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-      </div>
-
-      <div class="bio">
-        <img src="assets/img/aboutus/amel.png" alt="Amel">
-        <h3>Amelia Maslaqun Naila</h3>
-        <h5>Front End Engineer</h5>
-        <div class="socmed">
-          <a href="https://www.instagram.com/ameeliamn" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/ameeliamn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-      </div>
-
-      <div class="bio">
-        <img src="assets/img/aboutus/dylan.png" alt="Dylan">
-        <h3>M. Dylan Ramadhan</h3>
-        <h5>Back End Engineer</h5>
-        <div class="socmed">
-          <a href="https://www.instagram.com/mdylanr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/muhammad-dylan-ramadhan" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-      </div>
-
-      <div class="bio">
-        <img src="assets/img/aboutus/bella.png" alt="Bella">
-        <h3>Bella Shintia</h3>
-        <h5>Back End Engineer</h5>
-        <div class="socmed">
-          <a href="https://www.instagram.com/bellasht_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/bella-shintia-194aa728b" target=",black"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-      </div>
-
-      <div class="bio">
-        <img src="assets/img/aboutus/nadita.png" alt="Nadita">
-        <h3>Nadita Khaerunisa</h3>
-        <h5>Quality Assurance</h5>
-        <div class="socmed">
-          <a href="https://www.instagram.com/naditaanisa" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/nadita-khaerunisa" target=",black"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-<!-- End About Team -->
-
-<!-- FOOTER -->
-<div class="footer">
-  <div class="gg">
-      <img src="assets/img/logo/gg.png" alt="" style="width: 10%;">
-    <h2>Globegaze</h2>
-    <p>"Breaking Boundaries, Connecting Continents: Your Window to the World."
-    </p>
-    <ul class="social">
-      <li><a class="ig" href="https://instagram.com/thisisglobegaze?igshid=OGQ5ZDc2ODk2ZA"><i class="fa-brands fa-instagram"></i></a></li>
-      <li><a class="linked" href="https://www.linkedin.com/in/globe-gaze-75093b299/"><i class="fa-brands fa-linkedin-in"></i></a></li>
-      <li><a class="twit" href="https://twitter.com/thisisglobegaze?t=G5w4d26cux9I01fbd0xi0A&s=09"><i class="fa-brands fa-x-twitter"></i></a></li>
-      <li><a class="fb" href="https://www.facebook.com/profile.php?id=61553347523426"><i class="fa-brands fa-facebook-f"></i></a></li>
-    </ul>
-  </div>
-  <div class="links">
-    <h2>Company</h2>
-    <ul>
-      <li>
-        <a href="aboutus.html">About Us</a>
-      </li>
-      <li>
-        <a href="contact.html">Contact Us</a>
-      </li>
-      <li>
-        <a href="privacy.html">Privacy Policy</a>
-      </li>
-      <li>
-        <a href="workatgg.html">Work at GlobeGaze</a>
-      </li>
-    </ul>
-  </div>
-  <div class="links">
-    <h2>Topics</h2>
-    <ul>
-      <li>
-        <a href="newstopic.html" class="nav-link" data-topic="lifestyle" onclick="onNavItemClick('lifestyle')">Lifestyle</a>
-      </li>
-      <li>
-        <a href="newstopic.html" class="nav-link" data-topic="technology" onclick="onNavItemClick('technology')">Technology</a>
-      </li>
-      <li>
-        <a href="newstopic.html" class="nav-link" data-topic="sports" onclick="onNavItemClick('sports')">Sports</a>
-      </li>
-      <li>
-        <a href="newstopic.html" class="nav-link" data-topic="entertainment" onclick="onNavItemClick('entertainment')">Entertainment</a>
-      </li>
-      <li>
-        <a href="newstopic.html" class="nav-link" data-topic="politics" onclick="onNavItemClick('politics')">Politics</a>
-      </li>
-    </ul>
-  </div>
-</div>
-  <div class="copyright">
-    <i class="fa-regular fa-copyright"></i>
-    <p>GlobeGaze 2023</p>
-  </p>
-
-<!-- AOS JS -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
-<!-- Main JS -->
-<script src="assets/js/main.js"></script>
-<script src="assets/js/login.js"></script>
-<script src="assets/js/newstopic.js"></script>
-
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/newstopic.js"></script>
   </body>
 </html>
