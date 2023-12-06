@@ -97,29 +97,28 @@
             <input type="text" id="email" name="email" placeholder="Enter your email" required />
           </div>
           <div class="button">
-            <button type="submit">Subscribe</button>
+            <button type="button" onclick="subscribe()">Subscribe</button>
           </div>
         </div>
+        <p id="subscription-message"></p>
       </div>
-      <button class="close-btn">&times;</button>
+      <button class="close-btn" onclick="closeSubscribeForm()">&times;</button>
     </div>
 
     <!-- LOGIN/REGISTRASI FORM -->
     <div class="form-popup">
       <i class="close-btn fa-solid fa-xmark"></i>
       <div class="form-box login">
-        <div class="form-details">
-          <h2>Welcome Back</h2>
-          <p>Please login using your email & password</p>
-        </div>
         <div class="form-content">
-          <h2>LOG IN</h2>
+          <h2>log in</h2>
           <form action="#" id="login-form" class="log">
             <div class="input-data">
-              <input type="text" id="email" placeholder="Email" required />
+              <input type="text" id="email" required />
+              <label for="">Email</label>
             </div>
             <div class="input-data">
-              <input type="password" name="password" id="password" placeholder="Password" required />
+              <input type="password" name="password" id="password" required />
+              <label for="">Password</label>
             </div>
             <button type="submit">Log In</button>
           </form>
@@ -131,21 +130,20 @@
       </div>
 
       <div class="form-box signup">
-        <div class="form-details">
-          <h2>Create Account</h2>
-          <p>Use your email for registeration</p>
-        </div>
         <div class="form-content">
-          <h2>SIGN UP</h2>
+          <h2>sign up</h2>
           <form action="#" id="regis-form" class="log">
             <div class="input-data">
-              <input type="text" name="name" id="name" placeholder="Name" required />
+              <input type="text" name="name" id="name" required />
+              <label for="">Name</label>
             </div>
             <div class="input-data">
-              <input type="text" id="email" placeholder="Email" required />
+              <input type="text" id="email" required />
+              <label for="">Email</label>
             </div>
             <div class="input-data">
-              <input type="password" name="password" id="password" placeholder="Password" required />
+              <input type="password" name="password" id="password" required />
+              <label for="">Password</label>
             </div>
             <button type="submit">Sign Up</button>
           </form>
