@@ -509,12 +509,12 @@ form button:hover {
 
 .copyright {
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   background-color: #000000;
   color: #ffffff;
   padding: 15px;
-  text-align: left;
+  text-align: center;
   font-size: 12px;
   min-height: 100%;
   height: auto;
@@ -522,9 +522,14 @@ form button:hover {
   width: 970px;
 }
 
+.copyright .copy {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
 .copyright i {
   margin-top: 13px;
-  margin-left: 30px;
+  margin-left: 10px;
   text-align: right;
 }
 

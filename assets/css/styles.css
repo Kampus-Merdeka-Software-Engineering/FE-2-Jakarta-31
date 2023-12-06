@@ -1263,11 +1263,14 @@ section {
   text-align: left;
   font-size: 15px;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
-.footer ul li a:hover {
+.footer .links ul li a:hover {
   opacity: 1;
-  color: white;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  transform: scale(1);
 }
 
 .footer .copyright {
@@ -1281,12 +1284,12 @@ section {
 
 .copyright {
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   background-color: #000000;
   color: #ffffff;
   padding: 15px;
-  text-align: left;
+  text-align: center;
   font-size: 12px;
   min-height: 100%;
   height: auto;
@@ -1294,9 +1297,14 @@ section {
   width: 970px;
 }
 
+.copyright .copy {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
 .copyright i {
   margin-top: 13px;
-  margin-left: 30px;
+  margin-left: 10px;
   text-align: right;
 }
 
