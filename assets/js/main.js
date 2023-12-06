@@ -56,3 +56,14 @@ document.querySelector("#open-subscribe-form-main").addEventListener("click", fu
 document.querySelector(".subscribe-form .close-btn").addEventListener("click", function () {
   closeSubscribeForm();
 });
+
+// CRITICISM & SUGGESTION
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.querySelector(".chat form");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    alert("Form submitted successfully!📬");
+    form.reset();
+  });
+});
