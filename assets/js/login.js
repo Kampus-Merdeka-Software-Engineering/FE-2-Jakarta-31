@@ -43,7 +43,7 @@ loginForm.addEventListener("submit", (e) => {
   if (email == "user@example.com" && password === "password") {
     sessionStorage.setItem("isLoggedIn", true);
     sessionStorage.setItem("username", email);
-    alert(`Welcome, ${username}!🙋🏻 You have Successfully logged in`);
+    alert(`Welcome, ${username}!🙋🏻 You have Successfully logged in🎉`);
   } else {
     alert("Invalid email or password. Please try again.");
   }
