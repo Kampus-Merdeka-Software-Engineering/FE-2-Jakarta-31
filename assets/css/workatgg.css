@@ -790,21 +790,19 @@ form .input-data label {
   padding-left: 7rem;
 }
 
-.gg h2 {
+.gg h1 {
   display: flex;
   position: relative;
-  background: linear-gradient(to right, #9a0680, #79018c, #4c0070);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-weight: 700;
+  color: white;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 45px;
   margin-bottom: 15px;
   text-align: left;
-  font-size: 45px;
-  margin-left: -150px;
+  margin-left: -18rem;
   align-items: center;
-  font-style: italic;
-  margin-top: -65px;
+  letter-spacing: 1px;
+  margin-top: -0.5rem;
   justify-content: space-around;
 }
 
