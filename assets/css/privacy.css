@@ -826,7 +826,7 @@ form .input-data label {
 .footer .links ul li a:hover {
   opacity: 1;
   color: #ffffff;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   transform: scale(1);
 }
 

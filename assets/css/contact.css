@@ -493,9 +493,11 @@ form button:hover {
   cursor: pointer;
 }
 
-.footer ul li a:hover {
+.footer .links ul li a:hover {
   opacity: 1;
-  color: white;
+  color: #ffffff;
+  letter-spacing: 2px;
+  transform: scale(1);
 }
 
 .footer .copyright {
