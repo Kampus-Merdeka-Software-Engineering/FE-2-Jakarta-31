@@ -51,7 +51,7 @@ function renderSection(arr) {
 async function fetchAndRenderData(topic) {
   const query = encodeURIComponent(topic);
   try {
-    const data = await fetchData(query);
+    const data = await fetchData(topic);
 
     // Check if data.articles is defined and has length
     if (data && data.articles && Array.isArray(data.articles) && data.articles.length > 0) {
