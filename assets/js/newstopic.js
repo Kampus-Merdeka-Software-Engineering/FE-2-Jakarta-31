@@ -4,9 +4,19 @@ const url = "https://newsapi.org/v2/everything?q=";
 window.addEventListener("load", () => fetchData(["lifestyle", "technology", "sports", "entertainment", "politics"]));
 
 async function fetchData(query) {
-  const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-  const data = await res.json();
-  return data;
+  try {
+    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch data. Status: ${res.status}`);
+    }
+
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error; // Re-throw the error to be caught in the calling function
+  }
 }
 
 function renderSection(arr) {
@@ -52,11 +62,11 @@ async function fetchAndRenderData(topic) {
   try {
     const data = await fetchData(query);
 
-    // Check if data.articles is defined before calling renderSection
-    if (data && data.articles && Array.isArray(data.articles)) {
+    // Check if data.articles is defined and has length
+    if (data && data.articles && Array.isArray(data.articles) && data.articles.length > 0) {
       renderSection(data.articles);
     } else {
-      console.error("Data or data.articles is undefined:", data);
+      console.error("Invalid data structure or empty articles array:", data);
       // Handle the error or provide a default behavior
     }
   } catch (error) {
