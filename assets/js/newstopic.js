@@ -43,7 +43,7 @@ function renderSection(arr) {
 
   document.querySelectorAll(".grid").forEach((grid, index) => {
     grid.addEventListener("click", () => {
-      displaySelectedNews(arr[index]);
+      displaySelectedNews(arr[index], section);
     });
   });
 }
