@@ -53,7 +53,7 @@ async function fetchAndRenderData(topic) {
     const data = await fetchData(query);
 
     // Check if data.articles is defined before calling renderSection
-    if (data && data.articles) {
+    if (data && data.articles && Array.isArray(data.articles)) {
       renderSection(data.articles);
     } else {
       console.error("Data or data.articles is undefined:", data);
