@@ -11,6 +11,11 @@ function renderSection(arr) {
   let section = document.querySelector("section");
   let sectionHTML = "";
 
+  if (!arr || !arr.length) {
+    console.error("Invalid or empty data array");
+    return;
+  }
+
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].urlToImage) {
       const cutDescription = arr[i].description.slice(0, 85);
@@ -24,14 +29,14 @@ function renderSection(arr) {
           </div>
           <h4>${arr[i].title}</h4>
           <div class="desc">
-            ${cutDescription}...
+            ${cutDescription}
           </div>
         </div>
       `;
     }
   }
 
-  document.querySelector("section").innerHTML = sectionHTML;
+  section.innerHTML = sectionHTML;
 
   document.querySelectorAll(".grid").forEach((grid, index) => {
     grid.addEventListener("click", () => {
@@ -41,8 +46,16 @@ function renderSection(arr) {
 }
 
 async function fetchAndRenderData(query) {
-  const data = await fetchData(query);
-  renderSection(data.articles);
+  try {
+    const data = await fetchData(query);
+    if (data && data.articles) {
+      renderSection(data.articles);
+    } else {
+      console.error("Invalid data structure");
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
 }
 
 function setTopicInSessionStorage(topic) {
@@ -84,7 +97,7 @@ function displaySelectedNews(article) {
       <img class="image" src="${article.urlToImage}" alt="News Image" />
       <p class="sub-content">${article.description}</p>
       <p class="source">By ${article.source.name}</p>
-      <p class="content">${article.content}</p>
+      <p class="content"> ${article.content}</p>
     </div>
   `;
 }
