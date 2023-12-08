@@ -15,24 +15,24 @@ function renderSection(arr) {
   let sectionHTML = "";
 
   // Check if arr is defined and has a length
-  if (arr && arr.length) {
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i].urlToImage) {
-        const cutDescription = arr[i].description ? arr[i].description.slice(0, 85) : "";
+  if (arr && arr.articles && Array.isArray(arr.articles) && arr.articles.length > 0) {
+    for (let i = 0; i < arr.articles.length; i++) {
+      if (arr.articles[i].urlToImage) {
+        const cutDescription = arr.articles[i].description ? arr.articles[i].description.slice(0, 85) : "";
         sectionHTML += `
-            <div class="grid">
-              <img src="${arr[i].urlToImage}" alt="News Image">
-              <div class="souda">
-                <p>${arr[i].source?.name}</p>
-                <span> • </span>
-                <p>${new Date(arr[i].publishedAt).toLocaleDateString()}</p>
-              </div>
-              <h4>${arr[i].title}</h4>
-              <div class="desc">
-                ${cutDescription}
-              </div>
-            </div>
-          `;
+        <div class="grid">
+          <img src="${arr.articles[i].urlToImage}" alt="News Image">
+          <div class="souda">
+            <p>${arr.articles[i].source?.name}</p>
+            <span> • </span>
+            <p>${new Date(arr.articles[i].publishedAt).toLocaleDateString()}</p>
+          </div>
+          <h4>${arr.articles[i].title}</h4>
+          <div class="desc">
+            ${cutDescription}
+          </div>
+        </div>
+      `;
       }
     }
   } else {
@@ -43,7 +43,7 @@ function renderSection(arr) {
 
   document.querySelectorAll(".grid").forEach((grid, index) => {
     grid.addEventListener("click", () => {
-      displaySelectedNews(arr[index], section);
+      displaySelectedNews(arr.articles[index], section);
     });
   });
 }
@@ -53,9 +53,8 @@ async function fetchAndRenderData(topic) {
   try {
     const data = await fetchData(topic);
 
-    // Check if data.articles is defined and has length
-    if (data && data.articles && Array.isArray(data.articles) && data.articles.length > 0) {
-      renderSection(data.articles);
+    if (data && data.articles) {
+      renderSection(data);
     } else {
       console.error("Invalid data structure or empty articles array:", data);
       // Handle the error or provide a default behavior
@@ -95,6 +94,12 @@ document.querySelectorAll(".nav-link").forEach((navLink) => {
     setTopicInSessionStorage(topic);
   });
 });
+
+function onNavItemClick() {
+  const topic = this.getAttribute("data-topic");
+  fetchAndRenderData(topic);
+  setTopicInSessionStorage(topic);
+}
 
 function displaySelectedNews(article) {
   const section = document.querySelector("section");
