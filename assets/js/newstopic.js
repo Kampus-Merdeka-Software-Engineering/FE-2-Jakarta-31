@@ -13,27 +13,32 @@ function renderSection(arr) {
   let section = document.querySelector("section");
   let sectionHTML = "";
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].urlToImage) {
-      const cutDescription = arr[i].description.slice(0, 85);
-      sectionHTML += `
-        <div class="grid">
-          <img src="${arr[i].urlToImage}" alt="News Image">
-          <div class="souda">
-            <p>${arr[i].source.name}</p>
-            <span> • </span>
-            <p>${new Date(arr[i].publishedAt).toLocaleDateString()}</p>
-          </div>
-          <h4>${arr[i].title}</h4>
-          <div class="desc">
-            ${cutDescription}
-          </div>
-        </div>
-      `;
+  // Check if arr is defined and has a length
+  if (arr && arr.length) {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].urlToImage) {
+        const cutDescription = arr[i].description ? arr[i].description.slice(0, 85) : "";
+        sectionHTML += `
+            <div class="grid">
+              <img src="${arr[i].urlToImage}" alt="News Image">
+              <div class="souda">
+                <p>${arr[i].source?.name}</p>
+                <span> • </span>
+                <p>${new Date(arr[i].publishedAt).toLocaleDateString()}</p>
+              </div>
+              <h4>${arr[i].title}</h4>
+              <div class="desc">
+                ${cutDescription}
+              </div>
+            </div>
+          `;
+      }
     }
+  } else {
+    sectionHTML = "<p>No articles found.</p>";
   }
 
-  document.querySelector("section").innerHTML = sectionHTML;
+  section.innerHTML = sectionHTML;
 
   document.querySelectorAll(".grid").forEach((grid, index) => {
     grid.addEventListener("click", () => {
@@ -44,8 +49,20 @@ function renderSection(arr) {
 
 async function fetchAndRenderData(topic) {
   const query = encodeURIComponent(topic);
-  const data = await fetchData(query);
-  renderSection(data.articles);
+  try {
+    const data = await fetchData(query);
+
+    // Check if data.articles is defined before calling renderSection
+    if (data && data.articles) {
+      renderSection(data.articles);
+    } else {
+      console.error("Data or data.articles is undefined:", data);
+      // Handle the error or provide a default behavior
+    }
+  } catch (error) {
+    console.error("Error fetching and rendering data:", error);
+    // Handle the error or provide a default behavior
+  }
 }
 
 function setTopicInSessionStorage(topic) {
