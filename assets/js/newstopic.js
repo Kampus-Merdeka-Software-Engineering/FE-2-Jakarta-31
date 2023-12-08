@@ -1,4 +1,4 @@
-const API_KEY = "eb078876cc9e4ab389e506a9aa8df764";
+const API_KEY = "78667e112f1947cb964b5e3f4845b488";
 const url = "https://newsapi.org/v2/everything?q=";
 
 async function fetchData(topic) {
