@@ -11,11 +11,6 @@ function renderSection(arr) {
   let section = document.querySelector("section");
   let sectionHTML = "";
 
-  if (!arr || !arr.length) {
-    console.error("Invalid or empty data array");
-    return;
-  }
-
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].urlToImage) {
       const cutDescription = arr[i].description.slice(0, 85);
@@ -36,7 +31,7 @@ function renderSection(arr) {
     }
   }
 
-  section.innerHTML = sectionHTML;
+  document.querySelector("section").innerHTML = sectionHTML;
 
   document.querySelectorAll(".grid").forEach((grid, index) => {
     grid.addEventListener("click", () => {
@@ -45,17 +40,10 @@ function renderSection(arr) {
   });
 }
 
-async function fetchAndRenderData(query) {
-  try {
-    const data = await fetchData(query);
-    if (data && data.articles) {
-      renderSection(data.articles);
-    } else {
-      console.error("Invalid data structure");
-    }
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
+async function fetchAndRenderData(topic) {
+  const query = encodeURIComponent(topic);
+  const data = await fetchData(query);
+  renderSection(data.articles);
 }
 
 function setTopicInSessionStorage(topic) {
