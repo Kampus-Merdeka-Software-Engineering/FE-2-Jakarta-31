@@ -3,20 +3,11 @@ const url = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load", () => fetchData(["lifestyle", "technology", "sports", "entertainment", "politics"]));
 
-async function fetchData(query) {
-  try {
-    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-
-    if (!res.ok) {
-      throw new Error(`Failed to fetch data. Status: ${res.status}`);
-    }
-
-    const data = await res.json();
-    return data;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error; // Re-throw the error to be caught in the calling function
-  }
+async function fetchData(topic) {
+  const query = encodeURIComponent(topic);
+  const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+  const data = await res.json();
+  return data;
 }
 
 function renderSection(arr) {
