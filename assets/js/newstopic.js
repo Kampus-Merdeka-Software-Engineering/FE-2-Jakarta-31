@@ -1,9 +1,9 @@
 const API_KEY = "78667e112f1947cb964b5e3f4845b488";
-const url = "https://newsapi.org/v2/everything?q=";
+const newsApiUrl = "https://newsapi.org/v2/everything?q=";
+const customApiUrl = "https://be-2-jakarta-31-production.up.railway.app/news";
 
-async function fetchData(topic) {
-  const query = encodeURIComponent(topic);
-  const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+async function fetchData(url) {
+  const res = await fetch(url);
   const data = await res.json();
   return data;
 }
@@ -12,25 +12,24 @@ function renderSection(arr) {
   let section = document.querySelector("section");
   let sectionHTML = "";
 
-  // Check if arr is defined and has a length
   if (arr && arr.articles && Array.isArray(arr.articles) && arr.articles.length > 0) {
     for (let i = 0; i < arr.articles.length; i++) {
       if (arr.articles[i].urlToImage) {
-        const cutDescription = arr.articles[i].description ? arr.articles[i].description.slice(0, 85) : "";
+        const cutDescription = arr.articles[i].description ? arr.articles[i].description.slice(0, 70) : "";
         sectionHTML += `
-        <div class="grid">
-          <img src="${arr.articles[i].urlToImage}" alt="News Image">
-          <div class="souda">
-            <p>${arr.articles[i].source?.name}</p>
-            <span> • </span>
-            <p>${new Date(arr.articles[i].publishedAt).toLocaleDateString()}</p>
+          <div class="grid">
+            <img src="${arr.articles[i].urlToImage}" alt="News Image">
+            <div class="souda">
+              <p>${arr.articles[i].source?.name}</p>
+              <span> • </span>
+              <p>${new Date(arr.articles[i].publishedAt).toLocaleDateString()}</p>
+            </div>
+            <h4>${arr.articles[i].title}</h4>
+            <div class="desc">
+              ${cutDescription}...
+            </div>
           </div>
-          <h4>${arr.articles[i].title}</h4>
-          <div class="desc">
-            ${cutDescription}
-          </div>
-        </div>
-      `;
+        `;
       }
     }
   } else {
@@ -47,19 +46,22 @@ function renderSection(arr) {
 }
 
 async function fetchAndRenderData(topic) {
-  const query = encodeURIComponent(topic);
-  try {
-    const data = await fetchData(topic);
+  const newsApiQuery = encodeURIComponent(topic);
+  const newsApiEndpoint = `${newsApiUrl}${newsApiQuery}&apiKey=${API_KEY}`;
+  const customApiEndpoint = "https://be-2-jakarta-31-production.up.railway.app/news";
 
-    if (data && data.articles) {
-      renderSection(data);
+  try {
+    const [newsApiData, customApiData] = await Promise.all([fetchData(newsApiEndpoint), fetchData(customApiEndpoint)]);
+
+    if (newsApiData && newsApiData.articles) {
+      renderSection(newsApiData);
     } else {
-      console.error("Invalid data structure or empty articles array:", data);
-      // Handle the error or provide a default behavior
+      console.error("Invalid data structure or empty articles array:", newsApiData);
     }
+
+    // Use customApiData as needed
   } catch (error) {
     console.error("Error fetching and rendering data:", error);
-    // Handle the error or provide a default behavior
   }
 }
 
