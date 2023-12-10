@@ -1,9 +1,21 @@
-const API_KEY = "eb078876cc9e4ab389e506a9aa8df764";
-const url = "https://newsapi.org/v2/everything?q=";
+const API_KEY_1 = "6mNUZwpweLSGR8lu7sQSIeXzfTrgyeZa1xp03b04";
+const url1 = "https://api.thenewsapi.com/v1/news/all?";
 
-async function fetchData(topic) {
-  const query = encodeURIComponent(topic);
-  const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+const requestOptions = {
+  method: "GET",
+};
+
+async function fetchData(api, params) {
+  const esc = encodeURIComponent;
+  const query = Object.keys(params)
+    .map(function (k) {
+      return esc(k) + "=" + esc(params[k]);
+    })
+    .join("&");
+
+  const url = api === "api1" ? `${url1}${query}` : `${url1}${query}&apiKey=${API_KEY_1}`;
+
+  const res = await fetch(url, requestOptions);
   const data = await res.json();
   return data;
 }
@@ -12,7 +24,6 @@ function renderSection(arr) {
   let section = document.querySelector("section");
   let sectionHTML = "";
 
-  // Check if arr is defined and has a length
   if (arr && arr.articles && Array.isArray(arr.articles) && arr.articles.length > 0) {
     for (let i = 0; i < arr.articles.length; i++) {
       if (arr.articles[i].urlToImage) {
@@ -46,20 +57,17 @@ function renderSection(arr) {
   });
 }
 
-async function fetchAndRenderData(topic) {
-  const query = encodeURIComponent(topic);
+async function fetchAndRenderData(api, params) {
   try {
-    const data = await fetchData(topic);
+    const data = await fetchData(api, params);
 
     if (data && data.articles) {
       renderSection(data);
     } else {
       console.error("Invalid data structure or empty articles array:", data);
-      // Handle the error or provide a default behavior
     }
   } catch (error) {
     console.error("Error fetching and rendering data:", error);
-    // Handle the error or provide a default behavior
   }
 }
 
@@ -73,29 +81,25 @@ function getTopicFromSessionStorage() {
 
 const defaultTopic = "lifestyle";
 const storedTopic = getTopicFromSessionStorage() || defaultTopic;
-fetchAndRenderData(storedTopic);
+fetchAndRenderData("api1", { api_token: API_KEY_1, categories: "business,tech", search: storedTopic, limit: "50" });
 setTopicInSessionStorage(storedTopic);
 
 const topics = ["lifestyle", "technology", "sports", "entertainment", "politics"];
 
 topics.forEach((topic) => {
   document.getElementById(topic).addEventListener("click", function () {
-    fetchAndRenderData(topic);
+    fetchAndRenderData("api1", { api_token: API_KEY_1, categories: "lifestyle,tech,sports,entertainment,politics", search: topic, limit: "50" });
     setTopicInSessionStorage(topic);
   });
 });
 
 document.querySelectorAll(".nav-link").forEach((navLink) => {
-  navLink.addEventListener("click", function () {
-    const topic = this.getAttribute("data-topic");
-    fetchAndRenderData(topic);
-    setTopicInSessionStorage(topic);
-  });
+  navLink.addEventListener("click", onNavItemClick);
 });
 
 function onNavItemClick() {
   const topic = this.getAttribute("data-topic");
-  fetchAndRenderData(topic);
+  fetchAndRenderData("api1", { api_token: API_KEY_1, categories: "lifestyle,tech,sports,entertainment,politics", search: topic, limit: "50" });
   setTopicInSessionStorage(topic);
 }
 
