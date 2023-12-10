@@ -35,35 +35,66 @@ logregLink.forEach((link) => {
   });
 });
 
-loginForm.addEventListener("submit", (e) => {
+const apiUrl = "https://be-2-jakarta-31-production.up.railway.app";
+
+loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  const email = document.getElementById("email-login").value;
+  const password = document.getElementById("password-login").value;
 
-  if (email == "user@example.com" && password === "password") {
-    sessionStorage.setItem("isLoggedIn", true);
-    sessionStorage.setItem("username", email);
-    alert(`Welcome, ${username}!🙋🏻 You have Successfully logged in🎊`);
-  } else {
-    alert("Invalid email or password. Please try again.");
+  try {
+    const response = await fetch(`${apiUrl}/users/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      sessionStorage.setItem("isLoggedIn", true);
+      sessionStorage.setItem("username", email);
+      alert("Welcome Back!🙋🏻‍♀️ You have Successfully LoggedIn.");
+      document.querySelector("body").classList.remove("show-popup");
+    } else {
+      const errorData = await response.json();
+      alert(`Login failed: ${errorData.message}`);
+    }
+  } catch (error) {
+    console.error("Error during login:", error);
   }
-
-  document.querySelector("body").classList.remove("show-popup");
 });
 
-regisForm.addEventListener("submit", (e) => {
+regisForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  const email = document.getElementById("email-regis").value;
+  const password = document.getElementById("password-regis").value;
 
-  sessionStorage.setItem("isLoggedIn", true);
-  sessionStorage.setItem("username", email);
-  alert(`Welcome, ${name}!🙋🏻 You have Successfully logged in🎊`);
-
-  showLoggedInUI();
-
-  document.querySelector("body").classList.remove("show-popup");
+  try {
+    const response = await fetch(`${apiUrl}/users/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, password }),
+    });
+    if (response.ok) {
+      const data = await response.json();
+      sessionStorage.setItem("isLoggedIn", true);
+      sessionStorage.setItem("username", email);
+      alert(`Welcome, ${name}!🙋🏻‍♀️ You have Successfully Signed Up`);
+      document.querySelector("body").classList.remove("show-popup");
+      showLoggedInUI();
+    } else {
+      const errorData = await response.json();
+      console.error("Registration failed:", errorData);
+      alert(`Registration failed: ${errorData.message}`);
+    }
+  } catch (error) {
+    console.error("Error during registration:", error);
+  }
 });
 
 logoutButton.addEventListener("click", () => {
