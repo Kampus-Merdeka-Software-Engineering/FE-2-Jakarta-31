@@ -18,10 +18,30 @@ function subscribe() {
   const messageElement = document.getElementById("subscription-message");
 
   if (email) {
-    alert("Thank's for subscribing!🤩");
-    isSubscribed = true;
-    updateSubscriptionUI();
-    closeSubscribeForm();
+    fetch("https://be-2-jakarta-31-production.up.railway.app/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Subscription failed");
+        }
+      })
+      .then((data) => {
+        alert("Thank's for Subscribing!🤩");
+        isSubscribed = true;
+        updateSubscriptionUI();
+        closeSubscribeForm();
+      })
+      .catch((error) => {
+        console.error("Error during subscription:", error);
+        alert("Subscription failed. Please try again.");
+      });
   } else {
     alert("Please enter your email address first!");
   }
@@ -59,11 +79,34 @@ document.querySelector(".subscribe-form .close-btn").addEventListener("click", f
 
 // CRITICISM & SUGGESTION
 document.addEventListener("DOMContentLoaded", function () {
-  var form = document.querySelector(".chat form");
+  const form = document.getElementById("feedbackForm");
+  const responseDiv = document.getElementById("response");
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    alert("Form submitted successfully!📬");
-    form.reset();
+    const email = document.getElementById("email-user").value;
+    const pesan = document.getElementById("message").value;
+
+    console.log("Email:", email);
+    console.log("Pesan", pesan);
+
+    fetch("https://be-2-jakarta-31-production.up.railway.app/kritik", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, pesan }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        responseDiv.textContent = data.pesan;
+        alert("Message Sent Successfully! Thank's for Reaching Out📬");
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("Error during form submission:", error);
+        responseDiv.textContent = "Error Submitting the form. Please try again";
+      });
   });
 });
