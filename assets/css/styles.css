@@ -125,6 +125,7 @@ header {
 .head-2 .left ul li {
   list-style: none;
 }
+
 .head-2 .left ul li a {
   display: block;
   padding: 2rem 0;
@@ -150,6 +151,7 @@ header {
 .head-2 .right ul li {
   list-style: none;
 }
+
 .head-2 .right ul li a {
   display: block;
   padding: 2rem 0;
@@ -401,12 +403,14 @@ section {
 }
 
 .souda p {
+  padding-top: 10px;
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .souda span {
   padding: 0 10px;
+  padding-top: 10px;
 }
 
 .desc {
@@ -883,10 +887,12 @@ section {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .picture {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
 }
+
 .picture img {
   width: 100%;
   display: block;
@@ -895,12 +901,14 @@ section {
 .details {
   padding: 10px 10px;
 }
+
 .details > h3 {
   color: #ffffff;
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 2rem;
 }
+
 .details > p {
   color: #dcdcdc;
   font-size: 13px;
@@ -914,6 +922,7 @@ section {
   .recentNews {
     margin-top: 3rem;
   }
+
   .recentNews .divider {
     height: 1.5px;
     width: 100%;
@@ -929,30 +938,35 @@ section {
     margin-right: auto;
     z-index: -1;
   }
+
   .card2 {
     grid-area: middle;
     margin-left: auto;
     margin-right: auto;
     z-index: -1;
   }
+
   .card3 {
     grid-area: bottom;
     margin-left: auto;
     margin-right: auto;
     z-index: -1;
   }
+
   .card4 {
     grid-area: top1;
     margin-left: auto;
     margin-right: auto;
     z-index: -1;
   }
+
   .card5 {
     grid-area: middle1;
     margin-left: auto;
     margin-right: auto;
     z-index: -1;
   }
+
   .card6 {
     grid-area: bottom1;
     margin-left: auto;
@@ -1085,7 +1099,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 15px; */
   border-radius: 5.5px;
   color: #79018c;
   letter-spacing: 2px;
@@ -1111,6 +1124,7 @@ section {
 
 .textblock a:hover span {
   color: white;
+  z-index: 1;
 }
 
 .textblock a:hover::before {
@@ -1120,7 +1134,6 @@ section {
 
 .textblock a span {
   display: inline-block;
-  z-index: 2;
   transition: 0.1s ease-in-out;
 }
 
