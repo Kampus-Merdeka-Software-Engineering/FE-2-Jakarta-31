@@ -114,8 +114,7 @@ header {
   background-clip: text;
   color: transparent;
   justify-content: center;
-  margin-right: auto;
-  margin-left: 3rem;
+  text-align: center;
   font-style: italic;
   width: 100%;
 }
