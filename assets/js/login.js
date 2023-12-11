@@ -72,6 +72,8 @@ regisForm.addEventListener("submit", async (e) => {
   const email = document.getElementById("email-regis").value;
   const password = document.getElementById("password-regis").value;
 
+  console.log("Nama:", nama);
+
   try {
     const response = await fetch(`${apiUrl}/users/register`, {
       method: "POST",
