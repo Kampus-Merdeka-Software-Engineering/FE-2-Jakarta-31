@@ -37,7 +37,7 @@ header {
   z-index: 1;
   overflow: hidden;
   width: 100%;
-  min-width: 1220px;
+  min-width: 1250px;
   max-width: 2000px;
 }
 
@@ -54,11 +54,14 @@ header {
   display: flex;
   padding: 10px;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1260px;
 }
 
 .head-1 .left,
 .head-1 .right {
   display: flex;
+  margin: 0 5rem;
 }
 
 .head-1 .right button {
@@ -100,6 +103,8 @@ header {
   display: flex;
   padding: 2px;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1260px;
 }
 
 .head-2 .left {
@@ -114,19 +119,20 @@ header {
   background-clip: text;
   color: transparent;
   justify-content: center;
-  margin-right: auto;
-  margin-left: 3rem;
+  text-align: center;
   font-style: italic;
   width: 100%;
 }
 
 .head-2 .left ul {
   display: flex;
+  margin-left: 5.3rem;
 }
 
 .head-2 .left ul li {
   list-style: none;
 }
+
 .head-2 .left ul li a {
   display: block;
   padding: 2rem 0;
@@ -147,11 +153,13 @@ header {
 
 .head-2 .right ul {
   display: flex;
+  margin-right: 6rem;
 }
 
 .head-2 .right ul li {
   list-style: none;
 }
+
 .head-2 .right ul li a {
   display: block;
   padding: 2rem 0;
