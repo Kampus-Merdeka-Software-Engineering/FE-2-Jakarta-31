@@ -68,7 +68,7 @@ loginForm.addEventListener("submit", async (e) => {
 
 regisForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const name = document.getElementById("name-regis").value;
+  const nama = document.getElementById("nama-regis").value;
   const email = document.getElementById("email-regis").value;
   const password = document.getElementById("password-regis").value;
 
@@ -78,13 +78,14 @@ regisForm.addEventListener("submit", async (e) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ nama, email, password }),
     });
     if (response.ok) {
       const data = await response.json();
       sessionStorage.setItem("isLoggedIn", true);
-      sessionStorage.setItem("username", email);
-      alert(`Welcome, ${name}!🙋🏻‍♀️ You have Successfully Signed Up`);
+      sessionStorage.setItem("username", nama);
+      sessionStorage.setItem("email", email);
+      alert(`Welcome, ${nama}!🙋🏻‍♀️ You have Successfully Signed Up`);
       document.querySelector("body").classList.remove("show-popup");
       showLoggedInUI();
     } else {
@@ -100,6 +101,7 @@ regisForm.addEventListener("submit", async (e) => {
 logoutButton.addEventListener("click", () => {
   sessionStorage.removeItem("isLoggedIn");
   sessionStorage.removeItem("username");
+  showPopup.reset();
   showLoggedOutUI();
 });
 
