@@ -103,7 +103,6 @@ regisForm.addEventListener("submit", async (e) => {
 logoutButton.addEventListener("click", () => {
   sessionStorage.removeItem("isLoggedIn");
   sessionStorage.removeItem("username");
-  showPopup.reset();
   showLoggedOutUI();
 });
 
